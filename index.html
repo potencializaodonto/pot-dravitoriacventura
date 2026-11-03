@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Meta Ads — Doc Inplan | 3 Out – 1 Nov 2026</title>
+<title>Dashboard Meta Ads — Doc Inplan | 4 Out – 2 Nov 2026</title>
 <style>
 :root, [data-theme="dark"] {
   --bg:#0c0e18; --surface:#13161f; --surface2:#1a1e2e; --surface3:#222640;
@@ -314,7 +314,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <button class="export-btn" onclick="exportPDF()" title="Exportar PDF">&#128196; Exportar PDF</button>
         <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema"><span id="theme-icon">🌙</span></button>
       </div>
-      <div class="gen-date">Gerado em 02/11/2026 &middot; Meta Graph API v21.0 &middot; 25 dias</div>
+      <div class="gen-date">Gerado em 03/11/2026 &middot; Meta Graph API v21.0 &middot; 25 dias</div>
     </div>
   </div>
 </div>
@@ -330,6 +330,9 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <button class="filter-btn" id="filter-7d" onclick="applyFilter('last_7d')">7 dias</button>
         <button class="filter-btn" id="filter-14d" onclick="applyFilter('last_14d')">14 dias</button>
         <button class="filter-btn active" id="filter-30d" onclick="applyFilter('last_30d')">30 dias</button>
+        <button class="filter-btn" id="filter-mes" onclick="applyFilter('this_month')">Mês atual</button>
+        <button class="filter-btn" id="filter-mes-ant" onclick="applyFilter('last_month')">Mês passado</button>
+        
       </div>
     </div>
   </div>
@@ -341,22 +344,22 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:14px;">
     <div class="kpi-card">
       <div class="kpi-label">Valor investido</div>
-      <div class="kpi-value" id="kpi-val-spend" style="color:var(--accent);">R$ 2.026,50</div>
-      <div class="kpi-sub" id="kpi-sub-spend">~R$ 81,06/dia</div>
+      <div class="kpi-value" id="kpi-val-spend" style="color:var(--accent);">R$ 2.024,83</div>
+      <div class="kpi-sub" id="kpi-sub-spend">~R$ 80,99/dia</div>
     </div>
     <div class="kpi-card g">
       <div class="kpi-label">Alcance Total</div>
-      <div class="kpi-value" id="kpi-val-reach" style="color:var(--green);">28.175</div>
+      <div class="kpi-value" id="kpi-val-reach" style="color:var(--green);">29.499</div>
       <div class="kpi-sub" id="kpi-sub-reach">pessoas únicas</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Frequência</div>
-      <div class="kpi-value" id="kpi-val-freq">3.05</div>
+      <div class="kpi-value" id="kpi-val-freq">2.98</div>
       <div class="kpi-sub" id="kpi-sub-freq">média por pessoa</div>
     </div>
     <div class="kpi-card y">
       <div class="kpi-label">Impressões Totais</div>
-      <div class="kpi-value" id="kpi-val-impressions">86.006</div>
+      <div class="kpi-value" id="kpi-val-impressions">87.951</div>
       <div class="kpi-sub" id="kpi-sub-impressions">exibições</div>
     </div>
   </div>
@@ -365,22 +368,22 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:14px;">
     <div class="kpi-card">
       <div class="kpi-label">Total de cliques no link</div>
-      <div class="kpi-value" id="kpi-val-link-clicks">1.003</div>
-      <div class="kpi-sub" id="kpi-sub-link-clicks">1.322 cliques totais</div>
+      <div class="kpi-value" id="kpi-val-link-clicks">998</div>
+      <div class="kpi-sub" id="kpi-sub-link-clicks">1.321 cliques totais</div>
     </div>
     <div class="kpi-card g">
       <div class="kpi-label">CTR (Taxa de cliques no link)</div>
-      <div class="kpi-value" id="kpi-val-ctr" style="color:var(--green);">1,17%</div>
+      <div class="kpi-value" id="kpi-val-ctr" style="color:var(--green);">1,13%</div>
       <div class="kpi-sub" id="kpi-sub-ctr">taxa de clique</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Custo por Clique em Links</div>
-      <div class="kpi-value" id="kpi-val-cpc">R$ 2,02</div>
+      <div class="kpi-value" id="kpi-val-cpc">R$ 2,03</div>
       <div class="kpi-sub" id="kpi-sub-cpc">custo por clique</div>
     </div>
     <div class="kpi-card y">
       <div class="kpi-label">CPM médio</div>
-      <div class="kpi-value" id="kpi-val-cpm">R$ 23,56</div>
+      <div class="kpi-value" id="kpi-val-cpm">R$ 23,02</div>
       <div class="kpi-sub" id="kpi-sub-cpm">custo por mil</div>
     </div>
   </div>
@@ -389,7 +392,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="kpi-grid" style="margin-bottom:40px;">
     <div class="kpi-card blue-card">
       <div class="kpi-label">Conversas iniciadas por mensagem</div>
-      <div class="kpi-value" id="kpi-val-dms">234</div>
+      <div class="kpi-value" id="kpi-val-dms">232</div>
       <div class="kpi-sub"></div>
     </div>
     <div class="kpi-card blue-card">
@@ -399,12 +402,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
     </div>
     <div class="kpi-card blue-card">
       <div class="kpi-label">Conversas iniciadas por mensagem (Facebook)</div>
-      <div class="kpi-value">5</div>
+      <div class="kpi-value">3</div>
       <div class="kpi-sub"></div>
     </div>
     <div class="kpi-card blue-card">
       <div class="kpi-label">Custo por conversas iniciadas por mensagem</div>
-      <div class="kpi-value" id="kpi-val-cpm-conversa">R$ 8,66</div>
+      <div class="kpi-value" id="kpi-val-cpm-conversa">R$ 8,73</div>
       <div class="kpi-sub"></div>
     </div>
   </div>
@@ -422,12 +425,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">987</div>
-              <div class="demo-bar demo-reach" style="height:57px;"></div>
+              <div class="demo-val">1.410</div>
+              <div class="demo-bar demo-reach" style="height:63px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">2</div>
-              <div class="demo-bar demo-conv" style="height:13px;"></div>
+              <div class="demo-bar demo-conv" style="height:16px;"></div>
             </div>
           </div>
           <div class="demo-label">18-24</div>
@@ -435,12 +438,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.739</div>
+              <div class="demo-val">3.533</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">14</div>
-              <div class="demo-bar demo-conv" style="height:97px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">13</div>
+              <div class="demo-bar demo-conv" style="height:109px;"></div>
             </div>
           </div>
           <div class="demo-label">25-34</div>
@@ -448,11 +451,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.437</div>
-              <div class="demo-bar demo-reach" style="height:142px;"></div>
+              <div class="demo-val">2.724</div>
+              <div class="demo-bar demo-reach" style="height:123px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">23</div>
+              <div class="demo-val" style="color:#60a5fa;">19</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -461,12 +464,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">1.364</div>
-              <div class="demo-bar demo-reach" style="height:79px;"></div>
+              <div class="demo-val">1.489</div>
+              <div class="demo-bar demo-reach" style="height:67px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">6</div>
-              <div class="demo-bar demo-conv" style="height:41px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">7</div>
+              <div class="demo-bar demo-conv" style="height:58px;"></div>
             </div>
           </div>
           <div class="demo-label">45-54</div>
@@ -474,12 +477,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">353</div>
-              <div class="demo-bar demo-reach" style="height:20px;"></div>
+              <div class="demo-val">401</div>
+              <div class="demo-bar demo-reach" style="height:18px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">2</div>
-              <div class="demo-bar demo-conv" style="height:13px;"></div>
+              <div class="demo-bar demo-conv" style="height:16px;"></div>
             </div>
           </div>
           <div class="demo-label">55-64</div>
@@ -487,8 +490,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">113</div>
-              <div class="demo-bar demo-reach" style="height:6px;"></div>
+              <div class="demo-val">122</div>
+              <div class="demo-bar demo-reach" style="height:5px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;"></div>
@@ -507,11 +510,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">6.745</div>
+              <div class="demo-val">8.434</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">43</div>
+              <div class="demo-val" style="color:#60a5fa;">39</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -520,12 +523,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">1.064</div>
-              <div class="demo-bar demo-reach" style="height:25px;"></div>
+              <div class="demo-val">1.033</div>
+              <div class="demo-bar demo-reach" style="height:19px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">4</div>
-              <div class="demo-bar demo-conv" style="height:14px;"></div>
+              <div class="demo-bar demo-conv" style="height:16px;"></div>
             </div>
           </div>
           <div class="demo-label">Masculino</div>
@@ -533,7 +536,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">8</div>
+              <div class="demo-val">7</div>
               <div class="demo-bar demo-reach" style="height:4px;"></div>
             </div>
             <div class="demo-bar-wrap">
@@ -554,12 +557,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.651</div>
-              <div class="demo-bar demo-reach" style="height:80px;"></div>
+              <div class="demo-val">2.900</div>
+              <div class="demo-bar demo-reach" style="height:77px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">8</div>
-              <div class="demo-bar demo-conv" style="height:27px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">6</div>
+              <div class="demo-bar demo-conv" style="height:20px;"></div>
             </div>
           </div>
           <div class="demo-label">18-24</div>
@@ -567,12 +570,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">5.249</div>
+              <div class="demo-val">5.977</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">35</div>
-              <div class="demo-bar demo-conv" style="height:121px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">31</div>
+              <div class="demo-bar demo-conv" style="height:107px;"></div>
             </div>
           </div>
           <div class="demo-label">25-34</div>
@@ -580,8 +583,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">3.921</div>
-              <div class="demo-bar demo-reach" style="height:119px;"></div>
+              <div class="demo-val">4.261</div>
+              <div class="demo-bar demo-reach" style="height:114px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">46</div>
@@ -593,12 +596,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.185</div>
-              <div class="demo-bar demo-reach" style="height:66px;"></div>
+              <div class="demo-val">2.300</div>
+              <div class="demo-bar demo-reach" style="height:61px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">16</div>
-              <div class="demo-bar demo-conv" style="height:55px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">17</div>
+              <div class="demo-bar demo-conv" style="height:59px;"></div>
             </div>
           </div>
           <div class="demo-label">45-54</div>
@@ -606,7 +609,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">553</div>
+              <div class="demo-val">607</div>
               <div class="demo-bar demo-reach" style="height:16px;"></div>
             </div>
             <div class="demo-bar-wrap">
@@ -619,7 +622,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">161</div>
+              <div class="demo-val">173</div>
               <div class="demo-bar demo-reach" style="height:4px;"></div>
             </div>
             <div class="demo-bar-wrap">
@@ -652,11 +655,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">12.282</div>
+              <div class="demo-val">13.662</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">105</div>
+              <div class="demo-val" style="color:#60a5fa;">100</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -665,8 +668,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">2.230</div>
-              <div class="demo-bar demo-reach" style="height:29px;"></div>
+              <div class="demo-val">2.183</div>
+              <div class="demo-bar demo-reach" style="height:25px;"></div>
             </div>
             <div class="demo-bar-wrap">
               <div class="demo-val" style="color:#60a5fa;">4</div>
@@ -693,18 +696,18 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
       </div>
     </div></div></div>
-  <div id="demo-30d"><div class="demo-charts-row"><div class="demo-chart">
+  <div id="demo-mes" style="display:none"><div class="demo-charts-row"><div class="demo-chart">
       <h3>Alcance por idade e Conversas iniciadas</h3>
       <div class="demo-bars">
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">6.729</div>
-              <div class="demo-bar demo-reach" style="height:99px;"></div>
+              <div class="demo-val">778</div>
+              <div class="demo-bar demo-reach" style="height:73px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">12</div>
-              <div class="demo-bar demo-conv" style="height:21px;"></div>
+              <div class="demo-val" style="color:#60a5fa;"></div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
             </div>
           </div>
           <div class="demo-label">18-24</div>
@@ -712,12 +715,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">10.767</div>
+              <div class="demo-val">1.698</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">68</div>
-              <div class="demo-bar demo-conv" style="height:122px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">3</div>
+              <div class="demo-bar demo-conv" style="height:96px;"></div>
             </div>
           </div>
           <div class="demo-label">25-34</div>
@@ -725,11 +728,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">6.936</div>
-              <div class="demo-bar demo-reach" style="height:103px;"></div>
+              <div class="demo-val">936</div>
+              <div class="demo-bar demo-reach" style="height:88px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">89</div>
+              <div class="demo-val" style="color:#60a5fa;">5</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -738,12 +741,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">3.945</div>
-              <div class="demo-bar demo-reach" style="height:58px;"></div>
+              <div class="demo-val">441</div>
+              <div class="demo-bar demo-reach" style="height:41px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">46</div>
-              <div class="demo-bar demo-conv" style="height:82px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">3</div>
+              <div class="demo-bar demo-conv" style="height:96px;"></div>
             </div>
           </div>
           <div class="demo-label">45-54</div>
@@ -751,12 +754,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">1.018</div>
-              <div class="demo-bar demo-reach" style="height:15px;"></div>
+              <div class="demo-val">153</div>
+              <div class="demo-bar demo-reach" style="height:14px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">18</div>
-              <div class="demo-bar demo-conv" style="height:32px;"></div>
+              <div class="demo-val" style="color:#60a5fa;"></div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
             </div>
           </div>
           <div class="demo-label">55-64</div>
@@ -764,7 +767,139 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">296</div>
+              <div class="demo-val">54</div>
+              <div class="demo-bar demo-reach" style="height:5px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;"></div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">65+</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div><div class="demo-chart">
+      <h3>Alcance por gênero e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">3.682</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">8</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Feminino</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">371</div>
+              <div class="demo-bar demo-reach" style="height:16px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">3</div>
+              <div class="demo-bar demo-conv" style="height:60px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Masculino</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">1</div>
+              <div class="demo-bar demo-reach" style="height:4px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;"></div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Desconhecido</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div></div></div>
+  <div id="demo-mes-ant" style="display:none"><div class="demo-charts-row"><div class="demo-chart">
+      <h3>Alcance por idade e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">6.789</div>
+              <div class="demo-bar demo-reach" style="height:99px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">12</div>
+              <div class="demo-bar demo-conv" style="height:22px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">18-24</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">10.970</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">71</div>
+              <div class="demo-bar demo-conv" style="height:133px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">25-34</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">7.170</div>
+              <div class="demo-bar demo-reach" style="height:104px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">85</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">35-44</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">4.004</div>
+              <div class="demo-bar demo-reach" style="height:58px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">50</div>
+              <div class="demo-bar demo-conv" style="height:94px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">45-54</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">1.019</div>
+              <div class="demo-bar demo-reach" style="height:14px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">19</div>
+              <div class="demo-bar demo-conv" style="height:35px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">55-64</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">288</div>
               <div class="demo-bar demo-reach" style="height:4px;"></div>
             </div>
             <div class="demo-bar-wrap">
@@ -797,11 +932,11 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">22.146</div>
+              <div class="demo-val">22.428</div>
               <div class="demo-bar demo-reach" style="height:160px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">223</div>
+              <div class="demo-val" style="color:#60a5fa;">229</div>
               <div class="demo-bar demo-conv" style="height:160px;"></div>
             </div>
           </div>
@@ -810,12 +945,12 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="demo-group">
           <div class="demo-group-bars">
             <div class="demo-bar-wrap">
-              <div class="demo-val">6.256</div>
-              <div class="demo-bar demo-reach" style="height:45px;"></div>
+              <div class="demo-val">6.519</div>
+              <div class="demo-bar demo-reach" style="height:46px;"></div>
             </div>
             <div class="demo-bar-wrap">
-              <div class="demo-val" style="color:#60a5fa;">10</div>
-              <div class="demo-bar demo-conv" style="height:7px;"></div>
+              <div class="demo-val" style="color:#60a5fa;">8</div>
+              <div class="demo-bar demo-conv" style="height:5px;"></div>
             </div>
           </div>
           <div class="demo-label">Masculino</div>
@@ -838,9 +973,154 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
       </div>
     </div></div></div>
+  <div id="demo-30d"><div class="demo-charts-row"><div class="demo-chart">
+      <h3>Alcance por idade e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">7.162</div>
+              <div class="demo-bar demo-reach" style="height:99px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">12</div>
+              <div class="demo-bar demo-conv" style="height:21px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">18-24</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">11.490</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">70</div>
+              <div class="demo-bar demo-conv" style="height:127px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">25-34</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">7.146</div>
+              <div class="demo-bar demo-reach" style="height:99px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">88</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">35-44</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">4.000</div>
+              <div class="demo-bar demo-reach" style="height:55px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">46</div>
+              <div class="demo-bar demo-conv" style="height:83px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">45-54</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">1.059</div>
+              <div class="demo-bar demo-reach" style="height:14px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">15</div>
+              <div class="demo-bar demo-conv" style="height:27px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">55-64</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">305</div>
+              <div class="demo-bar demo-reach" style="height:4px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;"></div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">65+</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val"></div>
+              <div class="demo-bar demo-reach" style="height:4px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">1</div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Unknown</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div><div class="demo-chart">
+      <h3>Alcance por gênero e Conversas iniciadas</h3>
+      <div class="demo-bars">
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">23.348</div>
+              <div class="demo-bar demo-reach" style="height:160px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">221</div>
+              <div class="demo-bar demo-conv" style="height:160px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Feminino</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">6.070</div>
+              <div class="demo-bar demo-reach" style="height:41px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">10</div>
+              <div class="demo-bar demo-conv" style="height:7px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Masculino</div>
+        </div>
+        <div class="demo-group">
+          <div class="demo-group-bars">
+            <div class="demo-bar-wrap">
+              <div class="demo-val">41</div>
+              <div class="demo-bar demo-reach" style="height:4px;"></div>
+            </div>
+            <div class="demo-bar-wrap">
+              <div class="demo-val" style="color:#60a5fa;">1</div>
+              <div class="demo-bar demo-conv" style="height:4px;"></div>
+            </div>
+          </div>
+          <div class="demo-label">Desconhecido</div>
+        </div></div>
+      <div class="demo-legend">
+        <span><i style="background:#22c55e;border-radius:2px;"></i> Alcance</span>
+        <span><i style="background:#1877f2;border-radius:2px;"></i> Conversas iniciadas por mensagem</span>
+      </div>
+    </div></div></div>
 
   <!-- CRIATIVOS -->
-  <div class="section-title">Melhores Criativos &middot; 10 de 16 anúncios &middot; por resultado</div>
+  <div class="section-title">Melhores Criativos &middot; 10 de 19 anúncios &middot; por resultado</div>
   <div style="font-size:12px;color:var(--muted);margin:-12px 0 16px;padding:8px 14px;background:var(--surface2);border-radius:8px;border-left:3px solid var(--accent);">
     Os valores por anúncio refletem a <strong>atribuição individual</strong> do Meta — a soma dos criativos pode ser maior que o total da conta, pois a mesma conversão pode ser atribuída a mais de um anúncio simultaneamente (comportamento padrão da API Meta).
   </div>
@@ -852,21 +1132,21 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD Você paga netflix... <span class="status-badge active">Ativo</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/792108822_1382806273958144_1675543138936343376_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=X-HGw73qyuoQ7kNvwF3TcxI&_nc_oc=AdolLMY1t7tyUI7XjBq5lZ3rGnnmwjC5fTpVjo27z-K6XHmiEoL6IwW71twxXBOXkksBNPFNKdoRGDs4V468boG7&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQLDG1RZb0i5IexChs_gUn7GikMAGlOVB1EWBDx-QQAdZ54JAS58eYeAST6wVjyAYe17yG3aOsI0nQ&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQSiHSLs6fqupb2ctfK7KQDB4oHltlETh9MMrz5Jpl6m7g&oe=6AEEC1FF" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/792108822_1382806273958144_1675543138936343376_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=UFglPl0m5OkQ7kNvwFF1r2p&_nc_oc=Adq1vt2ICAXRiWFeCo9jc0dyrjsUXfvJdP5PWaPAXpKs-cmg7cw2XcLzjAhb_zlVsjH485RtbnvjRS-UruB_HBGf&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQIFR2SZHo6U-_oXSfBNEd9KuoCWhi0_DswJJzQod9O5Si9B845POXC0G7oPXAxS9CoRyaYq9cJaiA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQM6e-UtffoCP6RFPwAzEIXv6aTK0sPU7L9kJ8e_XEk_Q&oe=6AEFA2FF" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"E se o seu botox pudesse fazer parte da sua rotina, e não pesar nela? ✨"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122213041994385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DezHPmhsWLR/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 502,18</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">7.776</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">102</div><div class="cm-label" id="ad-res-label-120252286799140325">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,90%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 499,17</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">7.724</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">100</div><div class="cm-label" id="ad-res-label-120252286799140325">Conversas iniciadas</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,89%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">19.244 impressões totais</div>
+        <div class="ret-subtitle">18.932 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
@@ -874,7 +1154,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:8.8%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">1.703</span>
+            <span class="ret-count">1.664</span>
             <span class="ret-pct">8.8%</span>
           </div>
         </div>
@@ -885,7 +1165,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:4.9%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">942</span>
+            <span class="ret-count">926</span>
             <span class="ret-pct">4.9%</span>
           </div>
         </div>
@@ -896,7 +1176,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:3.8%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">725</span>
+            <span class="ret-count">711</span>
             <span class="ret-pct">3.8%</span>
           </div>
         </div>
@@ -907,7 +1187,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.8%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">532</span>
+            <span class="ret-count">525</span>
             <span class="ret-pct">2.8%</span>
           </div>
         </div>
@@ -919,7 +1199,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD Deixa eu te contar uma historia... <span class="status-badge paused">ADSET_PAUSED</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/790791797_1604821927598916_4618509328007526674_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=j9NsqskjgGEQ7kNvwFcd2Aw&_nc_oc=Adr_Lp3e6DxM7ysz3ywvZt9r-AHNZPE6JNTPgYv9WpcuMym4TePd7O0eqieItd55Gk5hEH1NI7jHbGgK9qG-Qml8&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQIGp5kJSMgMtosW_SijsLz1Ma4RP-YnQRh3eTM3ZCjydU0Ckm18wjYLfeC3BSrl1Ty9EwbXLEyOmQ&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQjmUXAD6aR5zukFNHvUUC0ZK5AvO5lIRsv7cYiBcxd2g&oe=6AEEE1D4" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/790791797_1604821927598916_4618509328007526674_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=SL1HXxqukr0Q7kNvwEKJjfw&_nc_oc=AdotPFme-X4g3EBAQm9j92gpmFuXpCKixs0F39i81QMSJyVdHu7EPh9iWst8tTozjNZQS-p79vPwL3_Dm98izN1N&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQK8lMIly08rSInEbrg_Bn0jLDhnzI0chjgfv64fn-Z6B2nGXbTbo1PXn6JrAlmQ5K_9SA3CVwRJCA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQR5suq-Qtuw0eps5L5bDXx0xFKPlz3AetXKYMnIInyxhA&oe=6AEF8A94" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"Cuidar da aparência não deveria depender de lembrar, conseguir encaixar na agenda ou esperar o momen..."</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122213042168385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DezHTbFsf6H/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
@@ -986,21 +1266,21 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD sabe aquela ruginha... <span class="status-badge paused">ADSET_PAUSED</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/792519290_1687379363031113_5126852597040870751_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=lfB-9r9WMmUQ7kNvwFGKCbv&_nc_oc=AdqLeC0H6SrJbAXavuVd32z_5po-EdQZnC0qLX4sIvGGhWEhAjgQAH_dnmDZP4CRUuE0u5NGeuOqiHRjusT-f5Zl&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQJlrxT5uzvcXJR_e19V15M5c6oZ-5O1C_23eusiWQlODrlraeEfJtMrG2ZYZeoWlc07K1enKagiNw&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQThF_9vaNV0K7X68jtcB1g6yBw9PpnRrAvFVBw_H6CS6w&oe=6AEED3E3" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/792519290_1687379363031113_5126852597040870751_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=lfB-9r9WMmUQ7kNvwHalF1z&_nc_oc=AdqlHQeNxd54NC1Kllnj52Ll88maUka0mMbR9BfbYd5YTJ9Zcxi3Aijg3FGw_2wA8cUSH5Xcn4gGIMz7pAmaKiuR&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQJCgZZFTx9BYmXmjTkoGH2B23H7Of5j31E6f6e-pFB7PN0I_hwjjb-CgR5Fr7dfzOyKtZNFzJeKig&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQRwvVGVckOXZSbsJvg-2MFDbOI7yZUoiD7Ror-DsMbLQA&oe=6AEF7CA3" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"O resultado que você gosta não precisa desaparecer simplesmente porque a rotina ficou corrida."</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122207413568385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Dcw0CDaMr1o/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 443,91</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">4.674</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 432,86</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">4.543</div><div class="cm-label">Alcance</div></div>
         <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">30</div><div class="cm-label" id="ad-res-label-120252286713720325">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,60%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,61%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">12.125 impressões totais</div>
+        <div class="ret-subtitle">11.712 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
@@ -1008,7 +1288,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:6.2%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">753</span>
+            <span class="ret-count">721</span>
             <span class="ret-pct">6.2%</span>
           </div>
         </div>
@@ -1019,7 +1299,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:3.5%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">429</span>
+            <span class="ret-count">411</span>
             <span class="ret-pct">3.5%</span>
           </div>
         </div>
@@ -1030,7 +1310,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.7%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">325</span>
+            <span class="ret-count">315</span>
             <span class="ret-pct">2.7%</span>
           </div>
         </div>
@@ -1041,8 +1321,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.0%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">224</span>
-            <span class="ret-pct">1.8%</span>
+            <span class="ret-count">217</span>
+            <span class="ret-pct">1.9%</span>
           </div>
         </div>
       </div>
@@ -1053,30 +1333,30 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-REELS VOCÊ EMAGRECE... <span class="status-badge active">Ativo</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/709507107_1006714538417826_6507622438547573037_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=BzizdFwmV2kQ7kNvwEsYiS6&_nc_oc=AdolpnhBP0GyF5MCuHYmgKEkZQqSkJ4xtW1RPDCPEyjaZXHZvafdmtOb9YX88fd6ydPxTgyCl0vrrcwG2JY3-cen&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQJaddk4hM0IQAxCV4v7AokNr7Bk3Be-wpa9GVyJi_mK966Pb6ZGYSTF9PGzrJVCm_dqYdKy3TJPJw&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=a7ce7f&_nc_sid=58080a&oh=00_AQSa6hz9GYVxAcvMQKQRno7KlutqToh0ijwi1dX3XFlK6w&oe=6AEEBB20" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/709507107_1006714538417826_6507622438547573037_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=z62dAjVG_3QQ7kNvwG7uGv1&_nc_oc=Adq546YlodMWXDA5I5RID8zzKNriVkqz4ewPwqunDp2b6VQwhuHc0cNjEBjFjEkhNf81Lq3xDC7f3yLzzQjlaXJR&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQIUKoSb5Gv-mfmNm9pE81aU0HRf-M_sQyI5rAtViEFlWzoR00OY4qRnuaE5bghMI_p8WCuSB6EPRw&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=a7ce7f&_nc_sid=58080a&oh=00_AQQqqqTCfvF8X-rSZ-cDzPCuCwYQ20zrHQWOL2wcOQfd8Q&oe=6AEF9C20" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"Você emagrece… mas sua pele acompanha? 👀"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: View Instagram Profile</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/1006714525084494" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DY8H0riDCk9/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 6,10</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">412</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">16</div><div class="cm-label" id="ad-res-label-120248783595050325">Cliques no link</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">3,23%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 6,58</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">440</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">17</div><div class="cm-label" id="ad-res-label-120248783595050325">Cliques no link</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">3,14%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">495 impressões totais</div>
+        <div class="ret-subtitle">541 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:2.0%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:2.2%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">10</span>
-            <span class="ret-pct">2.0%</span>
+            <span class="ret-count">12</span>
+            <span class="ret-pct">2.2%</span>
           </div>
         </div>
         
@@ -1086,8 +1366,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.0%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">2</span>
-            <span class="ret-pct">0.4%</span>
+            <span class="ret-count">3</span>
+            <span class="ret-pct">0.6%</span>
           </div>
         </div>
         
@@ -1120,30 +1400,30 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD LAVIEEN 01 / 17-10 <span class="status-badge paused">Pausado</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/828652907_3359458527596457_6558479542950100927_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=4pbXF2l1r2QQ7kNvwFZWo7H&_nc_oc=Adp9KXCnxMDNS3aOtCFMLthsiIyfUok7hAW2T7Tx7I9oj7DIl64o2iybhRR2hjS18Vl5qP8hkeSgJgRTyW-1lebl&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQKqbMCuW1QCSfCkqXvArxJKaphCv12BJWEzOjfL18imuBGJl3IjHZWYjN5vxjNLceBH26Ua_hVHvw&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQTW1-WFlZ7_g3L1Po28R185znBUCH7SvGHHOu1Gqi4zrQ&oe=6AEEDB63" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/828652907_3359458527596457_6558479542950100927_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=4pbXF2l1r2QQ7kNvwEySHyE&_nc_oc=AdokMWsprSb4srZNa1cfuj8-wNfyDlBhe9Rh7CLEDszT75yC-zByL-0fdH6cK_ETsVyB1Bek5H2ARclCivUefcdp&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQLIBbAgQbaDhGsZ2GeS1aONIEdVaSjhaAuuQaVZqr146aLtGMbM-yANWJdHMfKYyInabUAOWLaUiw&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQRapcAXgUgBD5yADLv-VgIr6z_NGVK9DuNP6BjfawBSTQ&oe=6AEF8423" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"✨ Você merece se olhar no espelho e enxergar uma pele que te faça sentir ainda mais confiante."</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122210385800385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Dd4jvMAMPqF/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 109,80</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">1.416</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">15</div><div class="cm-label" id="ad-res-label-120252650058040325">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,83%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 101,72</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">1.253</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">14</div><div class="cm-label" id="ad-res-label-120252650058040325">Conversas iniciadas</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,82%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">4.088 impressões totais</div>
+        <div class="ret-subtitle">3.672 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:6.0%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:5.9%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">244</span>
-            <span class="ret-pct">6.0%</span>
+            <span class="ret-count">218</span>
+            <span class="ret-pct">5.9%</span>
           </div>
         </div>
         
@@ -1153,7 +1433,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:3.1%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">128</span>
+            <span class="ret-count">113</span>
             <span class="ret-pct">3.1%</span>
           </div>
         </div>
@@ -1164,7 +1444,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.5%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">103</span>
+            <span class="ret-count">90</span>
             <span class="ret-pct">2.5%</span>
           </div>
         </div>
@@ -1175,7 +1455,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.0%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">75</span>
+            <span class="ret-count">67</span>
             <span class="ret-pct">1.8%</span>
           </div>
         </div>
@@ -1187,7 +1467,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-IM RECEPCIONISTA <span class="status-badge paused">CAMPAIGN_PAUSED</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t45.1600-4/852297687_1839430810399258_4749442661567659304_n.png?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=eQfaQI7eSa4Q7kNvwHsHOAR&_nc_oc=AdofO7LVx3sxdpQnrUacxF_i6PHREKSMQGAUJtlYlEGj8_0guonSLZO4niECZDUwlRZqpapc2Mx_IJ393xaPJuv_&_nc_zt=1&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQKWIRu1uV1CdAbl4EChZPIH6elIH_at-6y4S-B9_GBuAYlByUuOwm8EuAemEQL32Ebe20WmRoTb1Q&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=52f3c4&_nc_sid=58080a&oh=00_AQQMOysWdCu5ewARIR_mw_zE4M846MjLahk91fD1MxxCJw&oe=6AEEE026" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t45.1600-4/852297687_1839430810399258_4749442661567659304_n.png?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=eQfaQI7eSa4Q7kNvwHT1nOD&_nc_oc=AdqZkhcUzR4ZGW_BxFVr--h0YrCtdAGqt6W3fsMZgtJSstvKT2U695GMFVex5E040mypliYlnWPy1NJW3rktAqBk&_nc_zt=1&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQLcNJs4sC7gdzpGUmCF384ox5JWGXA_PRUPD3rv0WJXUINi0t5EuYhxXPsav289PqnxnPfRlMKo7Q&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=52f3c4&_nc_sid=58080a&oh=00_AQQt4vpidk6nnG4CPUqIqfRP2GfOt-sCQznIZGgEP_2-9g&oe=6AEF88E6" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">""</div>
         
         <div class="creative-links"><a href="https://www.facebook.com/109255848571528/posts/1079684981540754" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Deryg9wMvWS/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
@@ -1206,108 +1486,41 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD LAVIEEN 02 / 17-10 <span class="status-badge paused">Pausado</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/828896766_1796031531663657_3575661640057365615_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=FOb1A7_EekwQ7kNvwF90Uad&_nc_oc=Adpc2cTvR6zOwEBHevVs_UYHU4egX2wfp1y7C90Y3o-qEbf0BiKWH5IrwhNNgC806n9N7m2D82Is-OhySHSs4hb6&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQLN7e3GEFKo1o3E9sPiEn30O5EqJNN5zGculkmqhbhaMJLcTsJxLwKX4efM9-UMxdnOlfDjeLqX6A&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQT1dupousp1Cd2qQzHg5aGjt3ySQMG6_8b4Y8aoA0YBDA&oe=6AEED35D" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/828896766_1796031531663657_3575661640057365615_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=FOb1A7_EekwQ7kNvwF8eH0t&_nc_oc=Ado2Lno67r46wAwSwhP3OCFxBSAhqBetmX-R7mntHW271rnZ7jivI_VHgGbciJ6CzN14WJWgp0goPet3Qb_yhWZE&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQLOlcvwaUAq1EV5E_szp7V9ir5-Cupw0hJ56yqjr9Myg0AZYN5kPuqd79lJzzMCW9Kw3dOm1AGAEg&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQSQtvfnZqYwCoq1-f4LQHOOli-drsXiXPQ7Qf6Dd4gpuw&oe=6AEF7C1D" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"🤫 Existe um dia do mês em que a Doc Inplan para tudo para olhar com atenção especial para a sua pele..."</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122210385794385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Dd4jv8DszIe/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 135,02</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">1.604</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">12</div><div class="cm-label" id="ad-res-label-120252650167070325">Conversas iniciadas</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 118,94</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">1.424</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">11</div><div class="cm-label" id="ad-res-label-120252650167070325">Conversas iniciadas</div></div>
         <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,67%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">5.532 impressões totais</div>
+        <div class="ret-subtitle">4.921 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:5.3%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:5.1%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">293</span>
-            <span class="ret-pct">5.3%</span>
+            <span class="ret-count">251</span>
+            <span class="ret-pct">5.1%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 50%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:5.2%;background:#a855f7;"></div>
+            <div class="ret-row-bar" style="width:5.1%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">289</span>
-            <span class="ret-pct">5.2%</span>
-          </div>
-        </div>
-        
-        <div class="ret-row">
-          <div class="ret-row-label">Assistiram 75%</div>
-          <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:3.2%;background:#f59e0b;"></div>
-          </div>
-          <div class="ret-row-nums">
-            <span class="ret-count">177</span>
-            <span class="ret-pct">3.2%</span>
-          </div>
-        </div>
-        
-        <div class="ret-row">
-          <div class="ret-row-label">Assistiram 100%</div>
-          <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:2.0%;background:#22c55e;"></div>
-          </div>
-          <div class="ret-row-nums">
-            <span class="ret-count">102</span>
-            <span class="ret-pct">1.8%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="creative-card" data-ad-id="120250120160770325">
-      <div class="creative-header">
-        <div class="camp-path">HOF [POT] [ENG-WPP] › 17-06-26 [CLUBE] INTERESSES FITNEES 22a60  / IG</div>
-        <div class="ad-name">AD-VD BOTOX PLANNER 06 <span class="status-badge paused">ADSET_PAUSED</span></div>
-      </div>
-      <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/724795174_1771008427641975_9221619644152754909_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=E1pCIiEqKrsQ7kNvwHu_dtD&_nc_oc=Adok2bkZapuaP6EYaEUU_esRLOJ6f3zRESTZ4hBpTaDvqizTEMXDFA4_9yp-TKv5rtUmMom3L1sNcGkD1ZnyovGz&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQJIFja8bKRTGiZfsafOBmQRYyV8LvujteLHJ6IWI-FvifdQC8W_FT9Nr35bDY_RgGEpzb21kFGjeg&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQSF6UjebJl4FYKKrmsbc59k1V_xHvvLmv5GlHj8BMZ-2Q&oe=6AEEDFD5" alt="Criativo" onerror="this.style.display='none'">
-        <div class="creative-caption">"✨ Sua beleza merece planejamento, não parcelas acumuladas."</div>
-        <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
-        <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122207506184385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Dcyz5j6sPTa/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
-      </div>
-      <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 57,68</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">901</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">8</div><div class="cm-label" id="ad-res-label-120250120160770325">Conversas iniciadas</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,65%</div><div class="cm-label">CTR</div></div>
-      </div>
-      
-      <div class="retention-funnel">
-        <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">1.376 impressões totais</div>
-        
-        <div class="ret-row">
-          <div class="ret-row-label">Assistiram 25%</div>
-          <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:6.6%;background:#6c5ce7;"></div>
-          </div>
-          <div class="ret-row-nums">
-            <span class="ret-count">91</span>
-            <span class="ret-pct">6.6%</span>
-          </div>
-        </div>
-        
-        <div class="ret-row">
-          <div class="ret-row-label">Assistiram 50%</div>
-          <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:4.4%;background:#a855f7;"></div>
-          </div>
-          <div class="ret-row-nums">
-            <span class="ret-count">61</span>
-            <span class="ret-pct">4.4%</span>
+            <span class="ret-count">252</span>
+            <span class="ret-pct">5.1%</span>
           </div>
         </div>
         
@@ -1317,7 +1530,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:3.1%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">42</span>
+            <span class="ret-count">151</span>
             <span class="ret-pct">3.1%</span>
           </div>
         </div>
@@ -1328,7 +1541,7 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.0%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">25</span>
+            <span class="ret-count">88</span>
             <span class="ret-pct">1.8%</span>
           </div>
         </div>
@@ -1340,63 +1553,130 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-REELS PREENCHIMENTO LABIAL... <span class="status-badge active">Ativo</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/709843595_1741206897076871_1322795659887035498_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=h5xpEiyP71sQ7kNvwGUEAkg&_nc_oc=Adq7PHNVl_iouDRs6KllbF9sEjs51BwImzSPRbiw5QZfTeumxTiYsY7l4FWGxuYVBQxfZ99fw2trF2LWN3GInlpi&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQJGUtFw-ZrJEMpn9qwOu9Kp_LOk10SXtTaQuTX6uofiGbuwH_p03uvk-lhOOPowr27W8j5ONkc1TA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=a7ce7f&_nc_sid=58080a&oh=00_AQRwoQmqXWJZRlYIro3A6a7xAyxAjXine9n3J8-3ChWlSw&oe=6AEEC805" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/709843595_1741206897076871_1322795659887035498_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=h5xpEiyP71sQ7kNvwGm7FX3&_nc_oc=AdolWUdaNFYH8r4OClkLZMlrQ2r86ATaqAOuh3Zlt-l4Nv3IEXOKoyfP39UGFFYwXG_B5N-M3AIL9j268OEnzOft&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQJFlwCPSLzomM6IqVRGOQDM2mfWEgbMSUPVp8Og2w59YLkZdUFPEwnbr6ZtrF40E13oSWF0NnPD7g&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=a7ce7f&_nc_sid=58080a&oh=00_AQQPvYBVboGvtg7JBGAVc02JAXo5M1P_trBRjvrqG_8Hhg&oe=6AEFA905" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"Resultado imediato do preenchimento labial 💋"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: View Instagram Profile</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/1741206880410206" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DY8H0cMDB8W/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 2,54</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">256</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">7</div><div class="cm-label" id="ad-res-label-120248783496850325">Cliques no link</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">2,43%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 3,47</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">298</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">9</div><div class="cm-label" id="ad-res-label-120248783496850325">Cliques no link</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">2,62%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">288 impressões totais</div>
+        <div class="ret-subtitle">343 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:11.1%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:10.2%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">32</span>
-            <span class="ret-pct">11.1%</span>
+            <span class="ret-count">35</span>
+            <span class="ret-pct">10.2%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 50%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:8.7%;background:#a855f7;"></div>
+            <div class="ret-row-bar" style="width:7.6%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">25</span>
-            <span class="ret-pct">8.7%</span>
+            <span class="ret-count">26</span>
+            <span class="ret-pct">7.6%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 75%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:4.2%;background:#f59e0b;"></div>
+            <div class="ret-row-bar" style="width:3.5%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">12</span>
-            <span class="ret-pct">4.2%</span>
+            <span class="ret-pct">3.5%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 100%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:3.5%;background:#22c55e;"></div>
+            <div class="ret-row-bar" style="width:2.9%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
             <span class="ret-count">10</span>
+            <span class="ret-pct">2.9%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-card" data-ad-id="120250120160770325">
+      <div class="creative-header">
+        <div class="camp-path">HOF [POT] [ENG-WPP] › 17-06-26 [CLUBE] INTERESSES FITNEES 22a60  / IG</div>
+        <div class="ad-name">AD-VD BOTOX PLANNER 06 <span class="status-badge paused">ADSET_PAUSED</span></div>
+      </div>
+      <div class="creative-body">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/724795174_1771008427641975_9221619644152754909_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=E1pCIiEqKrsQ7kNvwH23up2&_nc_oc=AdqJyl4feAAt7Jl0sityYeLD_LK1MldFLXFNSPPrbP7EUg4Z-0rRs6uj6daBnvKfSOCB2ChoRIDYJ3Xjjad5fX34&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQKmNmE4_ZUslhfWv0hd6LvpIHtgu5x6Gmh3xjsvIRW2fAXNFhcF7uuDCIK_3fywqPkziUD4Ype69g&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQSpCpzrmzc0eg64G8B3DAwLHg6jmr-gdBlI4qZU05rfvg&oe=6AEF8895" alt="Criativo" onerror="this.style.display='none'">
+        <div class="creative-caption">"✨ Sua beleza merece planejamento, não parcelas acumuladas."</div>
+        <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
+        <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122207506184385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/Dcyz5j6sPTa/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
+      </div>
+      <div class="creative-metrics">
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 46,77</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">719</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">8</div><div class="cm-label" id="ad-res-label-120250120160770325">Conversas iniciadas</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,85%</div><div class="cm-label">CTR</div></div>
+      </div>
+      
+      <div class="retention-funnel">
+        <div class="retention-title">Retenção de Vídeo</div>
+        <div class="ret-subtitle">1.064 impressões totais</div>
+        
+        <div class="ret-row">
+          <div class="ret-row-label">Assistiram 25%</div>
+          <div class="ret-row-bar-wrap">
+            <div class="ret-row-bar" style="width:7.4%;background:#6c5ce7;"></div>
+          </div>
+          <div class="ret-row-nums">
+            <span class="ret-count">79</span>
+            <span class="ret-pct">7.4%</span>
+          </div>
+        </div>
+        
+        <div class="ret-row">
+          <div class="ret-row-label">Assistiram 50%</div>
+          <div class="ret-row-bar-wrap">
+            <div class="ret-row-bar" style="width:5.2%;background:#a855f7;"></div>
+          </div>
+          <div class="ret-row-nums">
+            <span class="ret-count">55</span>
+            <span class="ret-pct">5.2%</span>
+          </div>
+        </div>
+        
+        <div class="ret-row">
+          <div class="ret-row-label">Assistiram 75%</div>
+          <div class="ret-row-bar-wrap">
+            <div class="ret-row-bar" style="width:3.5%;background:#f59e0b;"></div>
+          </div>
+          <div class="ret-row-nums">
+            <span class="ret-count">37</span>
             <span class="ret-pct">3.5%</span>
+          </div>
+        </div>
+        
+        <div class="ret-row">
+          <div class="ret-row-label">Assistiram 100%</div>
+          <div class="ret-row-bar-wrap">
+            <div class="ret-row-bar" style="width:2.2%;background:#22c55e;"></div>
+          </div>
+          <div class="ret-row-nums">
+            <span class="ret-count">23</span>
+            <span class="ret-pct">2.2%</span>
           </div>
         </div>
       </div>
@@ -1407,52 +1687,52 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
         <div class="ad-name">AD-VD PLENA 01 / LOOK <span class="status-badge active">Ativo</span></div>
       </div>
       <div class="creative-body">
-        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/874402875_1132598623088308_3814873534673642186_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=xz_Ln6zUSDEQ7kNvwFwf81-&_nc_oc=Ado9QIKZKCC5DHpjVqWrRfShuelDvRash1gGwUVMbqcrro4dUCl4EClvblod_fEjS0ETu0BGy6APtfBNZ5WoGdIa&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=82qSVOJpWJiV7xMNdsoQyA&_nc_tpa=Q5bMBQIJ2KyxN-9yVbrftOQdvlFnJRsr4DlVdS2YfusxzSfIDyu9eTDk1aHyW_rmkKhRPgZQugs9RBcFBQ&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQk3jQru57Lxr_kWeRPHjLqWokJRHQU093QtEu1TXrbcg&oe=6AEEAE21" alt="Criativo" onerror="this.style.display='none'">
+        <img class="creative-thumb" src="https://scontent.fpoj7-1.fna.fbcdn.net/v/t15.5256-10/874402875_1132598623088308_3814873534673642186_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_ohc=xz_Ln6zUSDEQ7kNvwFSEOCY&_nc_oc=AdpVv6cQMqztH7oUnzSlmZLs9oMjcsbUbDiHcAq93E0O8HImTC9kBKADrTYdweTrJyhpOslrG9LbNmB3T-5NySXp&_nc_zt=23&_nc_ht=scontent.fpoj7-1.fna&edm=AOgd6ZUEAAAA&_nc_gid=pAumnjokYKdfRw6IVjBcug&_nc_tpa=Q5bMBQJjfgVLlx6RXPgsF540LcLWlHCBk2nd2diJkkf76OWD71-rWVrGWXOkP_v3IXGzXffoZosl-vDQyA&stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRlXfbFLVoymCCj8xMka69VwkvvHmOIRnuJgL1-XcHpHg&oe=6AEF8F21" alt="Criativo" onerror="this.style.display='none'">
         <div class="creative-caption">"Você já escolheu o look das festas de fim de ano? 👗✨"</div>
         <div style="font-size:12px;color:var(--accent);font-weight:700;margin-bottom:8px;">CTA: Whatsapp Message</div>
         <div class="creative-links"><a href="https://www.facebook.com/362135680314962/posts/122213690306385286" target="_blank" style="color:#1877f2;">Ver no Facebook ↗</a><a href="https://www.instagram.com/p/DfDfvZrsVo1/" target="_blank" style="color:#e1306c;">Ver no Instagram ↗</a></div>
       </div>
       <div class="creative-metrics">
-        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 32,46</div><div class="cm-label">Gasto</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">555</div><div class="cm-label">Alcance</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">5</div><div class="cm-label" id="ad-res-label-120253070537580325">Cliques no link</div></div>
-        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,54%</div><div class="cm-label">CTR</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="spend" style="color:var(--accent);">R$ 38,99</div><div class="cm-label">Gasto</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="reach">918</div><div class="cm-label">Alcance</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="resultado" style="color:var(--green);">7</div><div class="cm-label" id="ad-res-label-120253070537580325">Cliques no link</div></div>
+        <div class="cm-item"><div class="cm-val" data-ad-metric="ctr" style="color:var(--accent2);">0,50%</div><div class="cm-label">CTR</div></div>
       </div>
       
       <div class="retention-funnel">
         <div class="retention-title">Retenção de Vídeo</div>
-        <div class="ret-subtitle">929 impressões totais</div>
+        <div class="ret-subtitle">1.406 impressões totais</div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 25%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:11.9%;background:#6c5ce7;"></div>
+            <div class="ret-row-bar" style="width:10.9%;background:#6c5ce7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">111</span>
-            <span class="ret-pct">11.9%</span>
+            <span class="ret-count">153</span>
+            <span class="ret-pct">10.9%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 50%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:3.7%;background:#a855f7;"></div>
+            <div class="ret-row-bar" style="width:3.3%;background:#a855f7;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">34</span>
-            <span class="ret-pct">3.7%</span>
+            <span class="ret-count">47</span>
+            <span class="ret-pct">3.3%</span>
           </div>
         </div>
         
         <div class="ret-row">
           <div class="ret-row-label">Assistiram 75%</div>
           <div class="ret-row-bar-wrap">
-            <div class="ret-row-bar" style="width:2.4%;background:#f59e0b;"></div>
+            <div class="ret-row-bar" style="width:2.1%;background:#f59e0b;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">22</span>
-            <span class="ret-pct">2.4%</span>
+            <span class="ret-count">29</span>
+            <span class="ret-pct">2.1%</span>
           </div>
         </div>
         
@@ -1462,8 +1742,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
             <div class="ret-row-bar" style="width:2.0%;background:#22c55e;"></div>
           </div>
           <div class="ret-row-nums">
-            <span class="ret-count">15</span>
-            <span class="ret-pct">1.6%</span>
+            <span class="ret-count">19</span>
+            <span class="ret-pct">1.4%</span>
           </div>
         </div>
       </div>
@@ -1479,8 +1759,8 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
   <div class="footer-inner">
     <div><strong>Doc Inplan</strong> &middot; Potencializa Odonto &middot; Meta Ads</div>
     <div style="text-align:right;">
-      Dados: Meta Graph API v21.0 &middot; Gerado em 02/11/2026<br>
-      3 Out – 1 Nov 2026 &middot; 25 dias &middot; 5 campanhas  
+      Dados: Meta Graph API v21.0 &middot; Gerado em 03/11/2026<br>
+      4 Out – 2 Nov 2026 &middot; 25 dias &middot; 5 campanhas  
     </div>
   </div>
 </div>
@@ -1488,11 +1768,13 @@ a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:under
 <!-- JAVASCRIPT -->
 <script>
 // ═══ DADOS EMBARCADOS PARA FILTRO INTERATIVO ═══
-const DAILY_DATA = [{"date": "2026-10-03", "spend": 63.56, "impressions": 2900, "clicks": 34, "reach": 2029, "link_clicks": 25, "video_views": 755, "saves": 0, "dms": 5, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-04", "spend": 55.22, "impressions": 3381, "clicks": 50, "reach": 2363, "link_clicks": 46, "video_views": 645, "saves": 3, "dms": 9, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-05", "spend": 63.62, "impressions": 2776, "clicks": 41, "reach": 1994, "link_clicks": 34, "video_views": 470, "saves": 2, "dms": 4, "leads": 0, "reactions": 2, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-06", "spend": 100.22, "impressions": 3841, "clicks": 70, "reach": 2801, "link_clicks": 48, "video_views": 891, "saves": 0, "dms": 12, "leads": 0, "reactions": 17, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-07", "spend": 79.38, "impressions": 3370, "clicks": 45, "reach": 2309, "link_clicks": 35, "video_views": 601, "saves": 0, "dms": 8, "leads": 0, "reactions": 17, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-08", "spend": 75.55, "impressions": 3232, "clicks": 50, "reach": 2255, "link_clicks": 39, "video_views": 509, "saves": 0, "dms": 12, "leads": 0, "reactions": 8, "comments_count": 0, "landing_page_views": 1}, {"date": "2026-10-09", "spend": 75.73, "impressions": 3246, "clicks": 39, "reach": 2142, "link_clicks": 31, "video_views": 576, "saves": 2, "dms": 11, "leads": 0, "reactions": 11, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-10", "spend": 54.54, "impressions": 2950, "clicks": 36, "reach": 1971, "link_clicks": 30, "video_views": 405, "saves": 1, "dms": 7, "leads": 0, "reactions": 5, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-11", "spend": 57.08, "impressions": 2473, "clicks": 47, "reach": 1725, "link_clicks": 36, "video_views": 397, "saves": 2, "dms": 9, "leads": 0, "reactions": 4, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-12", "spend": 10.47, "impressions": 616, "clicks": 3, "reach": 337, "link_clicks": 3, "video_views": 61, "saves": 0, "dms": 3, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-13", "spend": 58.1, "impressions": 3353, "clicks": 31, "reach": 2281, "link_clicks": 29, "video_views": 609, "saves": 0, "dms": 2, "leads": 0, "reactions": 8, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-14", "spend": 106.17, "impressions": 4380, "clicks": 58, "reach": 2912, "link_clicks": 39, "video_views": 950, "saves": 0, "dms": 9, "leads": 0, "reactions": 15, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-15", "spend": 94.39, "impressions": 3435, "clicks": 58, "reach": 2357, "link_clicks": 43, "video_views": 836, "saves": 1, "dms": 16, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-16", "spend": 78.39, "impressions": 3278, "clicks": 46, "reach": 2089, "link_clicks": 36, "video_views": 679, "saves": 1, "dms": 10, "leads": 0, "reactions": 10, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-17", "spend": 53.08, "impressions": 2438, "clicks": 38, "reach": 1670, "link_clicks": 33, "video_views": 462, "saves": 2, "dms": 3, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-18", "spend": 66.94, "impressions": 2999, "clicks": 41, "reach": 1698, "link_clicks": 35, "video_views": 535, "saves": 0, "dms": 5, "leads": 0, "reactions": 9, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-19", "spend": 69.88, "impressions": 3016, "clicks": 68, "reach": 1862, "link_clicks": 50, "video_views": 385, "saves": 0, "dms": 8, "leads": 0, "reactions": 6, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-20", "spend": 83.08, "impressions": 3571, "clicks": 83, "reach": 2290, "link_clicks": 59, "video_views": 672, "saves": 2, "dms": 10, "leads": 0, "reactions": 16, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-21", "spend": 72.61, "impressions": 2564, "clicks": 57, "reach": 1789, "link_clicks": 39, "video_views": 568, "saves": 0, "dms": 12, "leads": 0, "reactions": 9, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-22", "spend": 61.74, "impressions": 2154, "clicks": 35, "reach": 1454, "link_clicks": 24, "video_views": 478, "saves": 0, "dms": 6, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-23", "spend": 61.12, "impressions": 2481, "clicks": 47, "reach": 1770, "link_clicks": 34, "video_views": 571, "saves": 0, "dms": 10, "leads": 0, "reactions": 15, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-24", "spend": 51.82, "impressions": 2506, "clicks": 36, "reach": 1782, "link_clicks": 26, "video_views": 541, "saves": 0, "dms": 6, "leads": 0, "reactions": 12, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-25", "spend": 54.71, "impressions": 2994, "clicks": 63, "reach": 2149, "link_clicks": 58, "video_views": 505, "saves": 1, "dms": 10, "leads": 0, "reactions": 10, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-26", "spend": 59.28, "impressions": 2544, "clicks": 38, "reach": 1522, "link_clicks": 32, "video_views": 426, "saves": 0, "dms": 7, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-27", "spend": 104.48, "impressions": 3755, "clicks": 43, "reach": 2628, "link_clicks": 23, "video_views": 921, "saves": 2, "dms": 4, "leads": 0, "reactions": 17, "comments_count": 1, "landing_page_views": 0}];
-const ANTERIOR_ACCOUNT = {"spend": 1961.25, "impressions": 60893, "clicks": 1114, "reach": 20091, "ctr": 1.829439, "cpc": 1.760548, "cpm": 32.208136};
-const FULL_PERIOD = { since: '2026-10-03', until: '2026-11-01', dias: 30 };
-const CAMPS_DATA = {"last_7d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 37.05, "reach": 2839, "ctr": 2.36, "cpc": 0.44, "frequency": 1.252201, "actions": [{"action_type": "page_engagement", "value": "861", "1d_view": "748"}, {"action_type": "post_engagement", "value": "861", "1d_view": "748"}, {"action_type": "video_view", "value": "748", "1d_view": "748"}, {"action_type": "link_click", "value": "84"}, {"action_type": "post_reaction", "value": "27"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.messaging_block", "value": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "1"}, {"action_type": "post_interaction_gross", "value": "29"}, {"action_type": "post_interaction_net", "value": "28"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "26"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 270.24, "reach": 3725, "ctr": 0.7, "cpc": 4.5, "frequency": 2.295034, "actions": [{"action_type": "page_engagement", "value": "2164", "1d_view": "2048"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "3", "1d_view": "3"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "26", "1d_view": "4"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "59", "1d_view": "20"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "22", "1d_view": "4"}, {"action_type": "post_engagement", "value": "2164", "1d_view": "2048"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "35", "1d_view": "6"}, {"action_type": "video_view", "value": "2059", "1d_view": "2048"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "2"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "60"}, {"action_type": "post_reaction", "value": "34"}, {"action_type": "onsite_conversion.view_content", "value": "27"}, {"action_type": "onsite_app_view_content", "value": "27"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "1"}, {"action_type": "post_interaction_gross", "value": "45"}, {"action_type": "comment", "value": "2"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "27"}, {"action_type": "onsite_web_add_to_cart", "value": "2"}, {"action_type": "post_interaction_net", "value": "44"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "23"}, {"action_type": "onsite_web_app_view_content", "value": "27"}, {"action_type": "post", "value": "7"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_comment", "value": "2"}, {"action_type": "onsite_web_app_add_to_cart", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "33"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "2"}, {"action_type": "omni_add_to_cart", "value": "2"}, {"action_type": "omni_view_content", "value": "27"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 63.68, "reach": 776, "ctr": 0.54, "cpc": 4.25, "frequency": 3.606959, "actions": [{"action_type": "page_engagement", "value": "530", "1d_view": "506"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "4", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "19", "1d_view": "14"}, {"action_type": "post_engagement", "value": "530", "1d_view": "506"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "8", "1d_view": "3"}, {"action_type": "video_view", "value": "506", "1d_view": "506"}, {"action_type": "link_click", "value": "15"}, {"action_type": "post_reaction", "value": "7"}, {"action_type": "onsite_conversion.view_content", "value": "2"}, {"action_type": "onsite_app_view_content", "value": "2"}, {"action_type": "post_interaction_gross", "value": "9"}, {"action_type": "onsite_web_view_content", "value": "2"}, {"action_type": "post_interaction_net", "value": "9"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "2"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "3"}, {"action_type": "onsite_conversion.post_net_like", "value": "7"}, {"action_type": "omni_view_content", "value": "2"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 108.13, "reach": 1735, "ctr": 0.38, "cpc": 9.01, "frequency": 1.814986, "actions": [{"action_type": "page_engagement", "value": "726", "1d_view": "682"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "4", "1d_view": "2"}, {"action_type": "post_engagement", "value": "726", "1d_view": "682"}, {"action_type": "video_view", "value": "687", "1d_view": "682"}, {"action_type": "link_click", "value": "12"}, {"action_type": "post_reaction", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "27"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "27"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_14d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 76.89, "reach": 6785, "ctr": 2.37, "cpc": 0.36, "frequency": 1.321002, "actions": [{"action_type": "page_engagement", "value": "1880", "1d_view": "1627"}, {"action_type": "post_engagement", "value": "1880", "1d_view": "1627"}, {"action_type": "video_view", "value": "1627", "1d_view": "1627"}, {"action_type": "link_click", "value": "212"}, {"action_type": "post_reaction", "value": "39"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.messaging_block", "value": "2"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "2"}, {"action_type": "post_interaction_gross", "value": "41"}, {"action_type": "post_interaction_net", "value": "39"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "37"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 676.17, "reach": 6305, "ctr": 0.73, "cpc": 4.39, "frequency": 3.338779, "actions": [{"action_type": "page_engagement", "value": "5172", "1d_view": "4864"}, {"action_type": "onsite_conversion.view_content", "value": "66", "1d_view": "1"}, {"action_type": "onsite_app_view_content", "value": "66", "1d_view": "1"}, {"action_type": "onsite_web_view_content", "value": "66", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "6", "1d_view": "5"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "55", "1d_view": "10"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "152", "1d_view": "49"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "41", "1d_view": "7"}, {"action_type": "post_engagement", "value": "5172", "1d_view": "4864"}, {"action_type": "onsite_web_app_view_content", "value": "66", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "83", "1d_view": "11"}, {"action_type": "video_view", "value": "4900", "1d_view": "4864"}, {"action_type": "omni_view_content", "value": "66", "1d_view": "1"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "3"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "154"}, {"action_type": "post_reaction", "value": "95"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "3"}, {"action_type": "post_interaction_gross", "value": "118"}, {"action_type": "comment", "value": "5"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_add_to_cart", "value": "3"}, {"action_type": "post_interaction_net", "value": "115"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "52"}, {"action_type": "post", "value": "14"}, {"action_type": "onsite_conversion.post_save", "value": "4"}, {"action_type": "onsite_conversion.post_net_comment", "value": "5"}, {"action_type": "onsite_web_app_add_to_cart", "value": "3"}, {"action_type": "onsite_conversion.post_net_save", "value": "4"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "92"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "3"}, {"action_type": "omni_add_to_cart", "value": "3"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 63.68, "reach": 776, "ctr": 0.54, "cpc": 4.25, "frequency": 3.606959, "actions": [{"action_type": "page_engagement", "value": "530", "1d_view": "506"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "5", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "20", "1d_view": "14"}, {"action_type": "post_engagement", "value": "530", "1d_view": "506"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "8", "1d_view": "3"}, {"action_type": "video_view", "value": "506", "1d_view": "506"}, {"action_type": "link_click", "value": "15"}, {"action_type": "post_reaction", "value": "7"}, {"action_type": "onsite_conversion.view_content", "value": "2"}, {"action_type": "onsite_app_view_content", "value": "2"}, {"action_type": "post_interaction_gross", "value": "9"}, {"action_type": "onsite_web_view_content", "value": "2"}, {"action_type": "post_interaction_net", "value": "9"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "2"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "3"}, {"action_type": "onsite_conversion.post_net_like", "value": "7"}, {"action_type": "omni_view_content", "value": "2"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "[POT] VAGA DE EMPREGO", "spend": 9.19, "reach": 817, "ctr": 4.94, "cpc": 0.14, "frequency": 1.684211, "actions": [{"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "9", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "14", "1d_view": "1"}, {"action_type": "link_click", "value": "68"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "46"}, {"action_type": "onsite_app_view_content", "value": "46"}, {"action_type": "post_engagement", "value": "72"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "page_engagement", "value": "72"}, {"action_type": "onsite_web_view_content", "value": "46"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_web_app_view_content", "value": "46"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "46"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 108.13, "reach": 1735, "ctr": 0.38, "cpc": 9.01, "frequency": 1.814986, "actions": [{"action_type": "page_engagement", "value": "726", "1d_view": "682"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "4", "1d_view": "2"}, {"action_type": "post_engagement", "value": "726", "1d_view": "682"}, {"action_type": "video_view", "value": "687", "1d_view": "682"}, {"action_type": "link_click", "value": "12"}, {"action_type": "post_reaction", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "27"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "27"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_30d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 164.99, "reach": 16467, "ctr": 2.22, "cpc": 0.32, "frequency": 1.394972, "actions": [{"action_type": "page_engagement", "value": "3954", "1d_view": "3372"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "3", "1d_view": "1"}, {"action_type": "post_engagement", "value": "3954", "1d_view": "3372"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3", "1d_view": "1"}, {"action_type": "video_view", "value": "3373", "1d_view": "3372"}, {"action_type": "link_click", "value": "511"}, {"action_type": "post_reaction", "value": "65"}, {"action_type": "onsite_conversion.messaging_block", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "6"}, {"action_type": "post_interaction_gross", "value": "70"}, {"action_type": "post_interaction_net", "value": "64"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "4"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "4"}, {"action_type": "onsite_conversion.post_net_like", "value": "59"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 1435.69, "reach": 10847, "ctr": 0.71, "cpc": 4.4, "frequency": 4.249193, "actions": [{"action_type": "page_engagement", "value": "11656", "1d_view": "11014"}, {"action_type": "onsite_conversion.view_content", "value": "141", "1d_view": "2"}, {"action_type": "onsite_app_view_content", "value": "141", "1d_view": "2"}, {"action_type": "onsite_web_view_content", "value": "142", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "10", "1d_view": "9"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "129", "1d_view": "23"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "322", "1d_view": "110"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "111", "1d_view": "19"}, {"action_type": "post_engagement", "value": "11656", "1d_view": "11014"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "117", "1d_view": "1"}, {"action_type": "onsite_web_app_view_content", "value": "142", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "180", "1d_view": "21"}, {"action_type": "video_view", "value": "11076", "1d_view": "11014"}, {"action_type": "omni_view_content", "value": "142", "1d_view": "2"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "3"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "326"}, {"action_type": "post_reaction", "value": "199"}, {"action_type": "offsite_content_view_add_20_s_calls", "value": "1"}, {"action_type": "landing_page_view", "value": "1"}, {"action_type": "omni_landing_page_view", "value": "1"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "8"}, {"action_type": "post_interaction_gross", "value": "254"}, {"action_type": "comment", "value": "10"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_add_to_cart", "value": "3"}, {"action_type": "post_interaction_net", "value": "244"}, {"action_type": "post", "value": "30"}, {"action_type": "onsite_conversion.post_unsave", "value": "2"}, {"action_type": "view_content", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "15"}, {"action_type": "onsite_conversion.post_net_comment", "value": "10"}, {"action_type": "onsite_web_app_add_to_cart", "value": "3"}, {"action_type": "onsite_conversion.post_net_save", "value": "13"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "191"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "offsite_content_view_add_meta_leads", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "3"}, {"action_type": "omni_add_to_cart", "value": "3"}, {"action_type": "offsite_conversion.fb_pixel_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 308.5, "reach": 2681, "ctr": 0.69, "cpc": 3.59, "frequency": 4.632227, "actions": [{"action_type": "page_engagement", "value": "2088", "1d_view": "1963"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "9", "1d_view": "7"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "23", "1d_view": "10"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "80", "1d_view": "56"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "16", "1d_view": "9"}, {"action_type": "post_engagement", "value": "2088", "1d_view": "1963"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "12", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "35", "1d_view": "15"}, {"action_type": "video_view", "value": "1965", "1d_view": "1963"}, {"action_type": "link_click", "value": "86"}, {"action_type": "post_reaction", "value": "31"}, {"action_type": "onsite_conversion.view_content", "value": "14"}, {"action_type": "onsite_app_view_content", "value": "14"}, {"action_type": "post_interaction_gross", "value": "37"}, {"action_type": "onsite_web_view_content", "value": "14"}, {"action_type": "post_interaction_net", "value": "37"}, {"action_type": "onsite_web_app_view_content", "value": "14"}, {"action_type": "post", "value": "5"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "31"}, {"action_type": "omni_view_content", "value": "14"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "[POT] VAGA DE EMPREGO", "spend": 9.19, "reach": 817, "ctr": 4.94, "cpc": 0.14, "frequency": 1.684211, "actions": [{"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "9", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "14", "1d_view": "1"}, {"action_type": "link_click", "value": "68"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "46"}, {"action_type": "onsite_app_view_content", "value": "46"}, {"action_type": "post_engagement", "value": "72"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "page_engagement", "value": "72"}, {"action_type": "onsite_web_view_content", "value": "46"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_web_app_view_content", "value": "46"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "46"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 108.13, "reach": 1735, "ctr": 0.38, "cpc": 9.01, "frequency": 1.814986, "actions": [{"action_type": "page_engagement", "value": "726", "1d_view": "682"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "4", "1d_view": "2"}, {"action_type": "post_engagement", "value": "726", "1d_view": "682"}, {"action_type": "video_view", "value": "687", "1d_view": "682"}, {"action_type": "link_click", "value": "12"}, {"action_type": "post_reaction", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "27"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "27"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}]};
-const PERIOD_DATA = {"last_7d": {"spend": 479.1, "reach": 7662, "impressions": 18052, "clicks": 246, "link_clicks": 171, "ctr": 0.95, "cpc": 2.8, "cpm": 26.539996, "frequency": 2.356043, "dms": 47, "convs_ig": 46, "convs_fb": 1, "custo_conversa": 10.19, "ads": {"120248783244060325": {"spend": 3.7, "reach": 450, "ctr": 2.78, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 27.05, "reach": 2114, "ctr": 2.18, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783496850325": {"spend": 1.48, "reach": 116, "ctr": 2.16, "resultado_label": "Cliques no link", "resultado_val": 3}, "120248783595050325": {"spend": 4.82, "reach": 250, "ctr": 3.28, "resultado_label": "Cliques no link", "resultado_val": 10}, "120252286713720325": {"spend": 68.62, "reach": 1294, "ctr": 0.34, "resultado_label": "Conversas iniciadas", "resultado_val": 3}, "120252286767270325": {"spend": 71.12, "reach": 1108, "ctr": 0.48, "resultado_label": "Conversas iniciadas", "resultado_val": 7}, "120252286799140325": {"spend": 130.5, "reach": 2494, "ctr": 1.0, "resultado_label": "Conversas iniciadas", "resultado_val": 25}, "120253063235880325": {"spend": 33.85, "reach": 608, "ctr": 0.71, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 29.83, "reach": 411, "ctr": 0.36, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253070537580325": {"spend": 32.46, "reach": 555, "ctr": 0.54, "resultado_label": "Cliques no link", "resultado_val": 5}, "120253070538910325": {"spend": 47.34, "reach": 1169, "ctr": 0.38, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253070542270325": {"spend": 28.33, "reach": 406, "ctr": 0.15, "resultado_label": "Conversas iniciadas", "resultado_val": 1}}}, "last_14d": {"spend": 934.06, "reach": 14455, "impressions": 37338, "clicks": 635, "link_clicks": 461, "ctr": 1.23, "cpc": 2.03, "cpm": 25.016337, "frequency": 2.583051, "dms": 109, "convs_ig": 108, "convs_fb": 1, "custo_conversa": 8.57, "ads": {"120248783244060325": {"spend": 16.86, "reach": 2214, "ctr": 1.8, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 52.81, "reach": 4360, "ctr": 2.54, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783496850325": {"spend": 1.84, "reach": 151, "ctr": 2.78, "resultado_label": "Cliques no link", "resultado_val": 5}, "120248783595050325": {"spend": 5.38, "reach": 317, "ctr": 3.59, "resultado_label": "Cliques no link", "resultado_val": 14}, "120252286713720325": {"spend": 206.9, "reach": 2413, "ctr": 0.56, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120252286767270325": {"spend": 204.07, "reach": 1996, "ctr": 0.63, "resultado_label": "Conversas iniciadas", "resultado_val": 22}, "120252286799140325": {"spend": 265.2, "reach": 4622, "ctr": 0.9, "resultado_label": "Conversas iniciadas", "resultado_val": 47}, "120252650058040325": {"spend": 0.0, "reach": 0, "ctr": 0, "resultado_label": "Resultados", "resultado_val": 0}, "120252930390390325": {"spend": 9.19, "reach": 817, "ctr": 4.94, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120253063235880325": {"spend": 33.85, "reach": 608, "ctr": 0.71, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 29.83, "reach": 411, "ctr": 0.36, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253070537580325": {"spend": 32.46, "reach": 555, "ctr": 0.54, "resultado_label": "Cliques no link", "resultado_val": 5}, "120253070538910325": {"spend": 47.34, "reach": 1169, "ctr": 0.38, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253070542270325": {"spend": 28.33, "reach": 406, "ctr": 0.15, "resultado_label": "Conversas iniciadas", "resultado_val": 1}}}, "last_30d": {"spend": 2026.5, "reach": 28175, "impressions": 86006, "clicks": 1322, "link_clicks": 1003, "ctr": 1.17, "cpc": 2.02, "cpm": 23.56231, "frequency": 3.052564, "dms": 234, "convs_ig": 229, "convs_fb": 5, "custo_conversa": 8.66, "ads": {"120248783244060325": {"spend": 51.78, "reach": 7807, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 104.57, "reach": 9256, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120248783496850325": {"spend": 2.54, "reach": 256, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 7}, "120248783595050325": {"spend": 6.1, "reach": 412, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 16}, "120250120160770325": {"spend": 57.68, "reach": 901, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 8}, "120252286713720325": {"spend": 443.91, "reach": 4674, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 30}, "120252286767270325": {"spend": 431.92, "reach": 3308, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 40}, "120252286799140325": {"spend": 502.18, "reach": 7776, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 102}, "120252650058040325": {"spend": 109.8, "reach": 1416, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 15}, "120252650167070325": {"spend": 135.02, "reach": 1604, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 12}, "120252930390390325": {"spend": 9.19, "reach": 817, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120253063235880325": {"spend": 33.85, "reach": 608, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 29.83, "reach": 411, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253070537580325": {"spend": 32.46, "reach": 555, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 5}, "120253070538910325": {"spend": 47.34, "reach": 1169, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253070542270325": {"spend": 28.33, "reach": 406, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}}}};
+const DAILY_DATA = [{"date": "2026-10-04", "spend": 55.22, "impressions": 3381, "clicks": 50, "reach": 2363, "link_clicks": 46, "video_views": 645, "saves": 3, "dms": 9, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-05", "spend": 63.62, "impressions": 2776, "clicks": 41, "reach": 1994, "link_clicks": 34, "video_views": 470, "saves": 2, "dms": 4, "leads": 0, "reactions": 2, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-06", "spend": 100.22, "impressions": 3841, "clicks": 70, "reach": 2801, "link_clicks": 48, "video_views": 891, "saves": 0, "dms": 12, "leads": 0, "reactions": 17, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-07", "spend": 79.38, "impressions": 3370, "clicks": 45, "reach": 2309, "link_clicks": 35, "video_views": 601, "saves": 0, "dms": 8, "leads": 0, "reactions": 17, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-08", "spend": 75.55, "impressions": 3232, "clicks": 50, "reach": 2255, "link_clicks": 39, "video_views": 509, "saves": 0, "dms": 12, "leads": 0, "reactions": 8, "comments_count": 0, "landing_page_views": 1}, {"date": "2026-10-09", "spend": 75.73, "impressions": 3246, "clicks": 39, "reach": 2142, "link_clicks": 31, "video_views": 576, "saves": 2, "dms": 11, "leads": 0, "reactions": 11, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-10", "spend": 54.54, "impressions": 2950, "clicks": 36, "reach": 1971, "link_clicks": 30, "video_views": 405, "saves": 1, "dms": 7, "leads": 0, "reactions": 5, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-11", "spend": 57.08, "impressions": 2473, "clicks": 47, "reach": 1725, "link_clicks": 36, "video_views": 397, "saves": 2, "dms": 9, "leads": 0, "reactions": 4, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-12", "spend": 10.47, "impressions": 616, "clicks": 3, "reach": 337, "link_clicks": 3, "video_views": 61, "saves": 0, "dms": 3, "leads": 0, "reactions": 0, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-13", "spend": 58.1, "impressions": 3353, "clicks": 31, "reach": 2281, "link_clicks": 29, "video_views": 609, "saves": 0, "dms": 2, "leads": 0, "reactions": 8, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-14", "spend": 106.17, "impressions": 4380, "clicks": 58, "reach": 2912, "link_clicks": 39, "video_views": 950, "saves": 0, "dms": 9, "leads": 0, "reactions": 15, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-15", "spend": 94.39, "impressions": 3435, "clicks": 58, "reach": 2357, "link_clicks": 43, "video_views": 836, "saves": 1, "dms": 16, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-16", "spend": 78.39, "impressions": 3278, "clicks": 46, "reach": 2089, "link_clicks": 36, "video_views": 679, "saves": 1, "dms": 10, "leads": 0, "reactions": 10, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-17", "spend": 53.08, "impressions": 2438, "clicks": 38, "reach": 1670, "link_clicks": 33, "video_views": 462, "saves": 2, "dms": 3, "leads": 0, "reactions": 12, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-18", "spend": 66.94, "impressions": 2999, "clicks": 41, "reach": 1698, "link_clicks": 35, "video_views": 535, "saves": 0, "dms": 5, "leads": 0, "reactions": 9, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-19", "spend": 69.88, "impressions": 3016, "clicks": 68, "reach": 1862, "link_clicks": 50, "video_views": 385, "saves": 0, "dms": 8, "leads": 0, "reactions": 6, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-20", "spend": 83.08, "impressions": 3571, "clicks": 83, "reach": 2290, "link_clicks": 59, "video_views": 672, "saves": 2, "dms": 10, "leads": 0, "reactions": 16, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-21", "spend": 72.61, "impressions": 2564, "clicks": 57, "reach": 1789, "link_clicks": 39, "video_views": 568, "saves": 0, "dms": 12, "leads": 0, "reactions": 9, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-22", "spend": 61.74, "impressions": 2154, "clicks": 35, "reach": 1454, "link_clicks": 24, "video_views": 478, "saves": 0, "dms": 6, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-23", "spend": 61.12, "impressions": 2481, "clicks": 47, "reach": 1770, "link_clicks": 34, "video_views": 571, "saves": 0, "dms": 10, "leads": 0, "reactions": 15, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-24", "spend": 51.82, "impressions": 2506, "clicks": 36, "reach": 1782, "link_clicks": 26, "video_views": 541, "saves": 0, "dms": 6, "leads": 0, "reactions": 12, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-25", "spend": 54.71, "impressions": 2994, "clicks": 63, "reach": 2149, "link_clicks": 58, "video_views": 505, "saves": 1, "dms": 10, "leads": 0, "reactions": 10, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-26", "spend": 59.28, "impressions": 2544, "clicks": 38, "reach": 1522, "link_clicks": 32, "video_views": 426, "saves": 0, "dms": 7, "leads": 0, "reactions": 7, "comments_count": 0, "landing_page_views": 0}, {"date": "2026-10-27", "spend": 104.48, "impressions": 3755, "clicks": 43, "reach": 2628, "link_clicks": 23, "video_views": 921, "saves": 2, "dms": 4, "leads": 0, "reactions": 17, "comments_count": 1, "landing_page_views": 0}, {"date": "2026-10-28", "spend": 81.79, "impressions": 3082, "clicks": 50, "reach": 1909, "link_clicks": 34, "video_views": 726, "saves": 1, "dms": 11, "leads": 0, "reactions": 9, "comments_count": 0, "landing_page_views": 0}];
+const ANTERIOR_ACCOUNT = {"spend": 1948.88, "impressions": 61513, "clicks": 1117, "reach": 20170, "ctr": 1.815876, "cpc": 1.744745, "cpm": 31.682409};
+const FULL_PERIOD = { since: '2026-10-04', until: '2026-11-02', dias: 30 };
+const CAMPS_DATA = {"last_7d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 40.66, "reach": 2552, "ctr": 2.31, "cpc": 0.54, "frequency": 1.269592, "actions": [{"action_type": "page_engagement", "value": "830", "1d_view": "719"}, {"action_type": "post_engagement", "value": "830", "1d_view": "719"}, {"action_type": "video_view", "value": "719", "1d_view": "719"}, {"action_type": "link_click", "value": "75"}, {"action_type": "post_reaction", "value": "33"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.messaging_block", "value": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "1"}, {"action_type": "post_interaction_gross", "value": "36"}, {"action_type": "post_interaction_net", "value": "35"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "32"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 224.86, "reach": 3375, "ctr": 0.69, "cpc": 4.68, "frequency": 2.075556, "actions": [{"action_type": "page_engagement", "value": "1894", "1d_view": "1800"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "3", "1d_view": "3"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "18", "1d_view": "4"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "43", "1d_view": "15"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "16", "1d_view": "4"}, {"action_type": "post_engagement", "value": "1894", "1d_view": "1800"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "29", "1d_view": "4"}, {"action_type": "video_view", "value": "1806", "1d_view": "1800"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "2"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "48"}, {"action_type": "post_reaction", "value": "32"}, {"action_type": "onsite_conversion.view_content", "value": "23"}, {"action_type": "onsite_app_view_content", "value": "23"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "1"}, {"action_type": "post_interaction_gross", "value": "40"}, {"action_type": "comment", "value": "2"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "23"}, {"action_type": "onsite_web_add_to_cart", "value": "2"}, {"action_type": "post_interaction_net", "value": "39"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "21"}, {"action_type": "onsite_web_app_view_content", "value": "23"}, {"action_type": "post", "value": "4"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_comment", "value": "2"}, {"action_type": "onsite_web_app_add_to_cart", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "31"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "2"}, {"action_type": "omni_add_to_cart", "value": "2"}, {"action_type": "omni_view_content", "value": "23"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 73.0, "reach": 792, "ctr": 0.48, "cpc": 4.87, "frequency": 3.953283, "actions": [{"action_type": "page_engagement", "value": "558", "1d_view": "532"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "4", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "22", "1d_view": "17"}, {"action_type": "post_engagement", "value": "558", "1d_view": "532"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "9", "1d_view": "4"}, {"action_type": "video_view", "value": "532", "1d_view": "532"}, {"action_type": "link_click", "value": "15"}, {"action_type": "post_reaction", "value": "8"}, {"action_type": "onsite_conversion.view_content", "value": "2"}, {"action_type": "onsite_app_view_content", "value": "2"}, {"action_type": "post_interaction_gross", "value": "11"}, {"action_type": "onsite_web_view_content", "value": "2"}, {"action_type": "post_interaction_net", "value": "11"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "2"}, {"action_type": "post", "value": "3"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "3"}, {"action_type": "onsite_conversion.post_net_like", "value": "8"}, {"action_type": "omni_view_content", "value": "2"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 143.19, "reach": 4021, "ctr": 0.3, "cpc": 6.82, "frequency": 1.735141, "actions": [{"action_type": "page_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "5", "1d_view": "2"}, {"action_type": "post_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "video_view", "value": "1055", "1d_view": "1046"}, {"action_type": "link_click", "value": "21"}, {"action_type": "post_reaction", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "30"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "30"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_14d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 79.2, "reach": 6511, "ctr": 2.48, "cpc": 0.37, "frequency": 1.313009, "actions": [{"action_type": "page_engagement", "value": "1841", "1d_view": "1581"}, {"action_type": "post_engagement", "value": "1841", "1d_view": "1581"}, {"action_type": "video_view", "value": "1581", "1d_view": "1581"}, {"action_type": "link_click", "value": "212"}, {"action_type": "post_reaction", "value": "45"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.messaging_block", "value": "2"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "2"}, {"action_type": "post_interaction_gross", "value": "48"}, {"action_type": "post_interaction_net", "value": "46"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "2"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "2"}, {"action_type": "onsite_conversion.post_net_like", "value": "43"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 625.92, "reach": 6171, "ctr": 0.77, "cpc": 4.12, "frequency": 3.207746, "actions": [{"action_type": "page_engagement", "value": "4974", "1d_view": "4674"}, {"action_type": "onsite_conversion.view_content", "value": "67", "1d_view": "1"}, {"action_type": "onsite_app_view_content", "value": "67", "1d_view": "1"}, {"action_type": "onsite_web_view_content", "value": "67", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "6", "1d_view": "5"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "53", "1d_view": "9"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "145", "1d_view": "44"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "40", "1d_view": "7"}, {"action_type": "post_engagement", "value": "4974", "1d_view": "4674"}, {"action_type": "onsite_web_app_view_content", "value": "67", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "83", "1d_view": "10"}, {"action_type": "video_view", "value": "4705", "1d_view": "4674"}, {"action_type": "omni_view_content", "value": "67", "1d_view": "1"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "3"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "152"}, {"action_type": "post_reaction", "value": "94"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "3"}, {"action_type": "post_interaction_gross", "value": "117"}, {"action_type": "comment", "value": "5"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_add_to_cart", "value": "3"}, {"action_type": "post_interaction_net", "value": "114"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "53"}, {"action_type": "post", "value": "14"}, {"action_type": "onsite_conversion.post_save", "value": "4"}, {"action_type": "onsite_conversion.post_net_comment", "value": "5"}, {"action_type": "onsite_web_app_add_to_cart", "value": "3"}, {"action_type": "onsite_conversion.post_net_save", "value": "4"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "91"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "3"}, {"action_type": "omni_add_to_cart", "value": "3"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 73.0, "reach": 792, "ctr": 0.48, "cpc": 4.87, "frequency": 3.953283, "actions": [{"action_type": "page_engagement", "value": "558", "1d_view": "532"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "5", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "23", "1d_view": "17"}, {"action_type": "post_engagement", "value": "558", "1d_view": "532"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "9", "1d_view": "4"}, {"action_type": "video_view", "value": "532", "1d_view": "532"}, {"action_type": "link_click", "value": "15"}, {"action_type": "post_reaction", "value": "8"}, {"action_type": "onsite_conversion.view_content", "value": "2"}, {"action_type": "onsite_app_view_content", "value": "2"}, {"action_type": "post_interaction_gross", "value": "11"}, {"action_type": "onsite_web_view_content", "value": "2"}, {"action_type": "post_interaction_net", "value": "11"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "2"}, {"action_type": "post", "value": "3"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "3"}, {"action_type": "onsite_conversion.post_net_like", "value": "8"}, {"action_type": "omni_view_content", "value": "2"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "[POT] VAGA DE EMPREGO", "spend": 4.76, "reach": 530, "ctr": 4.34, "cpc": 0.15, "frequency": 1.349057, "actions": [{"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "9", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "7", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "7", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "7", "1d_view": "1"}, {"action_type": "link_click", "value": "31"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "20"}, {"action_type": "onsite_app_view_content", "value": "20"}, {"action_type": "post_engagement", "value": "35"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "page_engagement", "value": "35"}, {"action_type": "onsite_web_view_content", "value": "20"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_web_app_view_content", "value": "20"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "20"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 143.19, "reach": 4021, "ctr": 0.3, "cpc": 6.82, "frequency": 1.735141, "actions": [{"action_type": "page_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "5", "1d_view": "2"}, {"action_type": "post_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "video_view", "value": "1055", "1d_view": "1046"}, {"action_type": "link_click", "value": "21"}, {"action_type": "post_reaction", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "30"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "30"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "this_month": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 15.46, "reach": 813, "ctr": 1.61, "cpc": 1.03, "frequency": 1.146371, "actions": [{"action_type": "page_engagement", "value": "231", "1d_view": "199"}, {"action_type": "post_engagement", "value": "231", "1d_view": "199"}, {"action_type": "video_view", "value": "199", "1d_view": "199"}, {"action_type": "link_click", "value": "15"}, {"action_type": "post_reaction", "value": "16"}, {"action_type": "post_interaction_gross", "value": "17"}, {"action_type": "post_interaction_net", "value": "17"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "16"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 24.8, "reach": 540, "ctr": 1.18, "cpc": 2.48, "frequency": 1.566667, "actions": [{"action_type": "page_engagement", "value": "226", "1d_view": "210"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "10", "1d_view": "3"}, {"action_type": "post_engagement", "value": "226", "1d_view": "210"}, {"action_type": "video_view", "value": "211", "1d_view": "210"}, {"action_type": "link_click", "value": "10"}, {"action_type": "post_reaction", "value": "4"}, {"action_type": "onsite_conversion.view_content", "value": "7"}, {"action_type": "onsite_app_view_content", "value": "7"}, {"action_type": "post_interaction_gross", "value": "5"}, {"action_type": "onsite_web_view_content", "value": "7"}, {"action_type": "post_interaction_net", "value": "5"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "6"}, {"action_type": "onsite_web_app_view_content", "value": "7"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "4"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "6"}, {"action_type": "omni_view_content", "value": "7"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 23.32, "reach": 326, "ctr": 0.41, "cpc": 5.83, "frequency": 2.993865, "actions": [{"action_type": "page_engagement", "value": "120", "1d_view": "113"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "10", "1d_view": "9"}, {"action_type": "post_engagement", "value": "120", "1d_view": "113"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "4", "1d_view": "3"}, {"action_type": "video_view", "value": "113", "1d_view": "113"}, {"action_type": "link_click", "value": "4"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "3"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "3"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "1"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 37.25, "reach": 2569, "ctr": 0.23, "cpc": 4.14, "frequency": 1.525886, "actions": [{"action_type": "page_engagement", "value": "393", "1d_view": "376"}, {"action_type": "post_engagement", "value": "393", "1d_view": "376"}, {"action_type": "video_view", "value": "380", "1d_view": "376"}, {"action_type": "link_click", "value": "9"}, {"action_type": "post_reaction", "value": "4"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "1"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "4"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_month": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 170.28, "reach": 16888, "ctr": 2.24, "cpc": 0.32, "frequency": 1.388856, "actions": [{"action_type": "page_engagement", "value": "4092", "1d_view": "3497"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "3", "1d_view": "1"}, {"action_type": "post_engagement", "value": "4092", "1d_view": "3497"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3", "1d_view": "1"}, {"action_type": "video_view", "value": "3498", "1d_view": "3497"}, {"action_type": "link_click", "value": "525"}, {"action_type": "post_reaction", "value": "61"}, {"action_type": "onsite_conversion.messaging_block", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "6"}, {"action_type": "post_interaction_gross", "value": "69"}, {"action_type": "post_interaction_net", "value": "63"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.post_save", "value": "6"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "6"}, {"action_type": "onsite_conversion.post_net_like", "value": "55"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 1506.56, "reach": 11170, "ctr": 0.7, "cpc": 4.52, "frequency": 4.282453, "actions": [{"action_type": "page_engagement", "value": "12178", "1d_view": "11521"}, {"action_type": "onsite_conversion.view_content", "value": "144", "1d_view": "2"}, {"action_type": "onsite_app_view_content", "value": "144", "1d_view": "2"}, {"action_type": "onsite_web_view_content", "value": "145", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "10", "1d_view": "9"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "133", "1d_view": "24"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "337", "1d_view": "117"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "113", "1d_view": "19"}, {"action_type": "post_engagement", "value": "12178", "1d_view": "11521"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "120", "1d_view": "1"}, {"action_type": "onsite_web_app_view_content", "value": "145", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "184", "1d_view": "21"}, {"action_type": "video_view", "value": "11583", "1d_view": "11521"}, {"action_type": "omni_view_content", "value": "145", "1d_view": "2"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "7"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "333"}, {"action_type": "post_reaction", "value": "206"}, {"action_type": "offsite_content_view_add_20_s_calls", "value": "1"}, {"action_type": "landing_page_view", "value": "1"}, {"action_type": "omni_landing_page_view", "value": "1"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "8"}, {"action_type": "post_interaction_gross", "value": "262"}, {"action_type": "comment", "value": "10"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_add_to_cart", "value": "7"}, {"action_type": "post_interaction_net", "value": "252"}, {"action_type": "post", "value": "29"}, {"action_type": "onsite_conversion.post_unsave", "value": "2"}, {"action_type": "view_content", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "17"}, {"action_type": "onsite_conversion.post_net_comment", "value": "10"}, {"action_type": "onsite_web_app_add_to_cart", "value": "7"}, {"action_type": "onsite_conversion.post_net_save", "value": "15"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "198"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "offsite_content_view_add_meta_leads", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "7"}, {"action_type": "omni_add_to_cart", "value": "7"}, {"action_type": "offsite_conversion.fb_pixel_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 342.47, "reach": 2786, "ctr": 0.68, "cpc": 3.81, "frequency": 4.772075, "actions": [{"action_type": "page_engagement", "value": "2302", "1d_view": "2166"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "11", "1d_view": "9"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "26", "1d_view": "12"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "79", "1d_view": "55"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "19", "1d_view": "11"}, {"action_type": "post_engagement", "value": "2302", "1d_view": "2166"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "12", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "35", "1d_view": "15"}, {"action_type": "video_view", "value": "2168", "1d_view": "2166"}, {"action_type": "link_click", "value": "90"}, {"action_type": "post_reaction", "value": "38"}, {"action_type": "onsite_conversion.view_content", "value": "14"}, {"action_type": "onsite_app_view_content", "value": "14"}, {"action_type": "onsite_conversion.post_unlike", "value": "1"}, {"action_type": "post_interaction_gross", "value": "44"}, {"action_type": "onsite_web_view_content", "value": "14"}, {"action_type": "post_interaction_net", "value": "43"}, {"action_type": "onsite_web_app_view_content", "value": "14"}, {"action_type": "post", "value": "5"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "37"}, {"action_type": "omni_view_content", "value": "14"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "[POT] VAGA DE EMPREGO", "spend": 9.19, "reach": 817, "ctr": 4.94, "cpc": 0.14, "frequency": 1.684211, "actions": [{"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "9", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "14", "1d_view": "1"}, {"action_type": "link_click", "value": "68"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "46"}, {"action_type": "onsite_app_view_content", "value": "46"}, {"action_type": "post_engagement", "value": "72"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "page_engagement", "value": "72"}, {"action_type": "onsite_web_view_content", "value": "46"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_web_app_view_content", "value": "46"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "46"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 108.13, "reach": 1735, "ctr": 0.38, "cpc": 9.01, "frequency": 1.814986, "actions": [{"action_type": "page_engagement", "value": "726", "1d_view": "682"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "4", "1d_view": "2"}, {"action_type": "post_engagement", "value": "726", "1d_view": "682"}, {"action_type": "video_view", "value": "687", "1d_view": "682"}, {"action_type": "link_click", "value": "12"}, {"action_type": "post_reaction", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "27"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "27"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "2"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "25"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "2"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}], "last_30d": [{"campaign_name": "TRAFEGO PARA O PERFIL [POT] DRA VITORIA", "spend": 168.07, "reach": 16409, "ctr": 2.23, "cpc": 0.33, "frequency": 1.3907, "actions": [{"action_type": "page_engagement", "value": "3917", "1d_view": "3332"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "3", "1d_view": "1"}, {"action_type": "post_engagement", "value": "3917", "1d_view": "3332"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3", "1d_view": "1"}, {"action_type": "video_view", "value": "3333", "1d_view": "3332"}, {"action_type": "link_click", "value": "510"}, {"action_type": "post_reaction", "value": "68"}, {"action_type": "onsite_conversion.messaging_block", "value": "2"}, {"action_type": "onsite_conversion.post_unlike", "value": "5"}, {"action_type": "post_interaction_gross", "value": "74"}, {"action_type": "post_interaction_net", "value": "69"}, {"action_type": "post", "value": "2"}, {"action_type": "onsite_conversion.post_save", "value": "4"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "4"}, {"action_type": "onsite_conversion.post_net_like", "value": "63"}], "objective": "OUTCOME_TRAFFIC"}, {"campaign_name": "HOF [POT] [ENG-WPP]", "spend": 1410.72, "reach": 10640, "ctr": 0.71, "cpc": 4.39, "frequency": 4.234399, "actions": [{"action_type": "page_engagement", "value": "11266", "1d_view": "10631"}, {"action_type": "onsite_conversion.view_content", "value": "139", "1d_view": "2"}, {"action_type": "onsite_app_view_content", "value": "139", "1d_view": "2"}, {"action_type": "onsite_web_view_content", "value": "140", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "10", "1d_view": "9"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "127", "1d_view": "23"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "319", "1d_view": "108"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "109", "1d_view": "19"}, {"action_type": "post_engagement", "value": "11266", "1d_view": "10631"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "117", "1d_view": "1"}, {"action_type": "onsite_web_app_view_content", "value": "140", "1d_view": "2"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "178", "1d_view": "21"}, {"action_type": "video_view", "value": "10694", "1d_view": "10631"}, {"action_type": "omni_view_content", "value": "140", "1d_view": "2"}, {"action_type": "onsite_conversion.initiate_checkout", "value": "1"}, {"action_type": "onsite_conversion.add_to_cart", "value": "3"}, {"action_type": "omni_purchase", "value": "1"}, {"action_type": "link_click", "value": "321"}, {"action_type": "post_reaction", "value": "198"}, {"action_type": "offsite_content_view_add_20_s_calls", "value": "1"}, {"action_type": "landing_page_view", "value": "1"}, {"action_type": "omni_landing_page_view", "value": "1"}, {"action_type": "onsite_app_purchase", "value": "1"}, {"action_type": "onsite_conversion.post_unlike", "value": "8"}, {"action_type": "post_interaction_gross", "value": "251"}, {"action_type": "comment", "value": "10"}, {"action_type": "onsite_web_app_purchase", "value": "1"}, {"action_type": "onsite_web_add_to_cart", "value": "3"}, {"action_type": "post_interaction_net", "value": "241"}, {"action_type": "post", "value": "28"}, {"action_type": "onsite_conversion.post_unsave", "value": "2"}, {"action_type": "view_content", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "15"}, {"action_type": "onsite_conversion.post_net_comment", "value": "10"}, {"action_type": "onsite_web_app_add_to_cart", "value": "3"}, {"action_type": "onsite_conversion.post_net_save", "value": "13"}, {"action_type": "onsite_conversion.purchase", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "190"}, {"action_type": "onsite_web_initiate_checkout", "value": "1"}, {"action_type": "omni_initiated_checkout", "value": "1"}, {"action_type": "offsite_content_view_add_meta_leads", "value": "1"}, {"action_type": "onsite_web_purchase", "value": "1"}, {"action_type": "onsite_app_add_to_cart", "value": "3"}, {"action_type": "omni_add_to_cart", "value": "3"}, {"action_type": "offsite_conversion.fb_pixel_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "LAVIEEN DAY [POT] [ENG-WPP]", "spend": 293.66, "reach": 2458, "ctr": 0.67, "cpc": 3.76, "frequency": 4.769731, "actions": [{"action_type": "page_engagement", "value": "1915", "1d_view": "1800"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "9", "1d_view": "7"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "23", "1d_view": "10"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "79", "1d_view": "57"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "16", "1d_view": "9"}, {"action_type": "post_engagement", "value": "1915", "1d_view": "1800"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "11", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "34", "1d_view": "16"}, {"action_type": "video_view", "value": "1802", "1d_view": "1800"}, {"action_type": "link_click", "value": "78"}, {"action_type": "post_reaction", "value": "29"}, {"action_type": "onsite_conversion.view_content", "value": "12"}, {"action_type": "onsite_app_view_content", "value": "12"}, {"action_type": "post_interaction_gross", "value": "35"}, {"action_type": "onsite_web_view_content", "value": "12"}, {"action_type": "post_interaction_net", "value": "35"}, {"action_type": "onsite_web_app_view_content", "value": "12"}, {"action_type": "post", "value": "5"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "29"}, {"action_type": "omni_view_content", "value": "12"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "[POT] VAGA DE EMPREGO", "spend": 9.19, "reach": 817, "ctr": 4.94, "cpc": 0.14, "frequency": 1.684211, "actions": [{"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "9", "1d_view": "1"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "14", "1d_view": "1"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "14", "1d_view": "1"}, {"action_type": "link_click", "value": "68"}, {"action_type": "post_reaction", "value": "2"}, {"action_type": "onsite_conversion.view_content", "value": "46"}, {"action_type": "onsite_app_view_content", "value": "46"}, {"action_type": "post_engagement", "value": "72"}, {"action_type": "post_interaction_gross", "value": "4"}, {"action_type": "page_engagement", "value": "72"}, {"action_type": "onsite_web_view_content", "value": "46"}, {"action_type": "post_interaction_net", "value": "4"}, {"action_type": "onsite_web_app_view_content", "value": "46"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_save", "value": "1"}, {"action_type": "onsite_conversion.messaging_user_depth_3_message_send", "value": "2"}, {"action_type": "onsite_conversion.post_net_save", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "2"}, {"action_type": "omni_view_content", "value": "46"}], "objective": "OUTCOME_ENGAGEMENT"}, {"campaign_name": "PROTOCOLO PLENA [POT] [ENG-WPP]", "spend": 143.19, "reach": 4021, "ctr": 0.3, "cpc": 6.82, "frequency": 1.735141, "actions": [{"action_type": "page_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "onsite_conversion.total_messaging_connection", "value": "5", "1d_view": "2"}, {"action_type": "post_engagement", "value": "1106", "1d_view": "1046"}, {"action_type": "video_view", "value": "1055", "1d_view": "1046"}, {"action_type": "link_click", "value": "21"}, {"action_type": "post_reaction", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_replied_7d", "value": "1"}, {"action_type": "onsite_conversion.view_content", "value": "1"}, {"action_type": "onsite_app_view_content", "value": "1"}, {"action_type": "post_interaction_gross", "value": "30"}, {"action_type": "comment", "value": "1"}, {"action_type": "onsite_web_view_content", "value": "1"}, {"action_type": "post_interaction_net", "value": "30"}, {"action_type": "onsite_conversion.messaging_user_depth_2_message_send", "value": "1"}, {"action_type": "onsite_conversion.messaging_first_reply", "value": "3"}, {"action_type": "onsite_web_app_view_content", "value": "1"}, {"action_type": "post", "value": "1"}, {"action_type": "onsite_conversion.post_net_comment", "value": "1"}, {"action_type": "onsite_conversion.post_net_like", "value": "28"}, {"action_type": "onsite_conversion.messaging_conversation_started_7d", "value": "3"}, {"action_type": "omni_view_content", "value": "1"}], "objective": "OUTCOME_ENGAGEMENT"}]};
+const PERIOD_DATA = {"last_7d": {"spend": 481.71, "reach": 9294, "impressions": 20353, "clicks": 241, "link_clicks": 159, "ctr": 0.78, "cpc": 3.03, "cpm": 23.667764, "frequency": 2.189907, "dms": 43, "convs_ig": 42, "convs_fb": 1, "custo_conversa": 11.2, "ads": {"120248783244060325": {"spend": 3.72, "reach": 407, "ctr": 2.69, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 29.3, "reach": 1820, "ctr": 2.06, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783496850325": {"spend": 2.41, "reach": 161, "ctr": 2.59, "resultado_label": "Cliques no link", "resultado_val": 5}, "120248783595050325": {"spend": 5.23, "reach": 262, "ctr": 3.29, "resultado_label": "Cliques no link", "resultado_val": 11}, "120252286713720325": {"spend": 49.24, "reach": 1013, "ctr": 0.36, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120252286767270325": {"spend": 53.75, "reach": 909, "ctr": 0.32, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120252286799140325": {"spend": 121.87, "reach": 2354, "ctr": 0.94, "resultado_label": "Conversas iniciadas", "resultado_val": 23}, "120253063235880325": {"spend": 40.01, "reach": 631, "ctr": 0.63, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 32.99, "reach": 419, "ctr": 0.33, "resultado_label": "Conversas iniciadas", "resultado_val": 5}, "120253070537580325": {"spend": 38.99, "reach": 918, "ctr": 0.5, "resultado_label": "Cliques no link", "resultado_val": 7}, "120253070538910325": {"spend": 64.07, "reach": 3310, "ctr": 0.23, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253070542270325": {"spend": 35.23, "reach": 770, "ctr": 0.09, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253138879090325": {"spend": 2.44, "reach": 57, "ctr": 0.0, "resultado_label": "Resultados", "resultado_val": 0}, "120253138879100325": {"spend": 1.05, "reach": 46, "ctr": 1.69, "resultado_label": "Cliques no link", "resultado_val": 1}, "120253138879110325": {"spend": 1.41, "reach": 34, "ctr": 4.65, "resultado_label": "Cliques no link", "resultado_val": 2}}, "dias": 7}, "last_14d": {"spend": 926.07, "reach": 15767, "impressions": 39167, "clicks": 600, "link_clicks": 431, "ctr": 1.1, "cpc": 2.15, "cpm": 23.644139, "frequency": 2.484112, "dms": 104, "convs_ig": 103, "convs_fb": 1, "custo_conversa": 8.9, "ads": {"120248783244060325": {"spend": 15.15, "reach": 1912, "ctr": 2.02, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 55.52, "reach": 4288, "ctr": 2.58, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783496850325": {"spend": 2.77, "reach": 197, "ctr": 2.98, "resultado_label": "Cliques no link", "resultado_val": 7}, "120248783595050325": {"spend": 5.76, "reach": 340, "ctr": 3.49, "resultado_label": "Cliques no link", "resultado_val": 15}, "120252286713720325": {"spend": 184.9, "reach": 2333, "ctr": 0.59, "resultado_label": "Conversas iniciadas", "resultado_val": 13}, "120252286767270325": {"spend": 187.84, "reach": 1970, "ctr": 0.62, "resultado_label": "Conversas iniciadas", "resultado_val": 22}, "120252286799140325": {"spend": 253.18, "reach": 4537, "ctr": 0.97, "resultado_label": "Conversas iniciadas", "resultado_val": 48}, "120252650058040325": {"spend": 0.0, "reach": 0, "ctr": 0, "resultado_label": "Resultados", "resultado_val": 0}, "120252930390390325": {"spend": 4.76, "reach": 530, "ctr": 4.34, "resultado_label": "Conversas iniciadas", "resultado_val": 7}, "120253063235880325": {"spend": 40.01, "reach": 631, "ctr": 0.63, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 32.99, "reach": 419, "ctr": 0.33, "resultado_label": "Conversas iniciadas", "resultado_val": 5}, "120253070537580325": {"spend": 38.99, "reach": 918, "ctr": 0.5, "resultado_label": "Cliques no link", "resultado_val": 7}, "120253070538910325": {"spend": 64.07, "reach": 3310, "ctr": 0.23, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253070542270325": {"spend": 35.23, "reach": 770, "ctr": 0.09, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253138879090325": {"spend": 2.44, "reach": 57, "ctr": 0.0, "resultado_label": "Resultados", "resultado_val": 0}, "120253138879100325": {"spend": 1.05, "reach": 46, "ctr": 1.69, "resultado_label": "Cliques no link", "resultado_val": 1}, "120253138879110325": {"spend": 1.41, "reach": 34, "ctr": 4.65, "resultado_label": "Cliques no link", "resultado_val": 2}}, "dias": 14}, "this_month": {"spend": 100.83, "reach": 4071, "impressions": 6674, "clicks": 60, "link_clicks": 38, "ctr": 0.57, "cpc": 2.65, "cpm": 15.107881, "frequency": 1.639401, "dms": 11, "convs_ig": 11, "convs_fb": 0, "custo_conversa": 9.17, "ads": {"120248783244060325": {"spend": 1.36, "reach": 169, "ctr": 1.06, "resultado_label": "Cliques no link", "resultado_val": 2}, "120248783352730325": {"spend": 11.42, "reach": 466, "ctr": 1.35, "resultado_label": "Cliques no link", "resultado_val": 7}, "120248783496850325": {"spend": 1.46, "reach": 99, "ctr": 3.48, "resultado_label": "Cliques no link", "resultado_val": 4}, "120248783595050325": {"spend": 1.22, "reach": 87, "ctr": 1.83, "resultado_label": "Cliques no link", "resultado_val": 2}, "120252286799140325": {"spend": 24.8, "reach": 543, "ctr": 1.18, "resultado_label": "Conversas iniciadas", "resultado_val": 6}, "120253063235880325": {"spend": 14.73, "reach": 253, "ctr": 0.55, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253063252560325": {"spend": 8.59, "reach": 163, "ctr": 0.23, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253070537580325": {"spend": 6.53, "reach": 420, "ctr": 0.42, "resultado_label": "Cliques no link", "resultado_val": 2}, "120253070538910325": {"spend": 16.73, "reach": 2260, "ctr": 0.15, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253070542270325": {"spend": 6.9, "reach": 418, "ctr": 0.0, "resultado_label": "Resultados", "resultado_val": 0}, "120253138879090325": {"spend": 3.46, "reach": 86, "ctr": 0.0, "resultado_label": "Resultados", "resultado_val": 0}, "120253138879100325": {"spend": 1.65, "reach": 65, "ctr": 1.14, "resultado_label": "Cliques no link", "resultado_val": 1}, "120253138879110325": {"spend": 1.98, "reach": 45, "ctr": 3.51, "resultado_label": "Cliques no link", "resultado_val": 2}}, "dias": 3}, "last_month": {"spend": 2136.63, "reach": 28839, "impressions": 89110, "clicks": 1359, "link_clicks": 1028, "ctr": 1.15, "cpc": 2.08, "cpm": 23.977444, "frequency": 3.089913, "dms": 238, "convs_ig": 233, "convs_fb": 5, "custo_conversa": 8.98, "ads": {"120248783244060325": {"spend": 51.46, "reach": 7764, "ctr": 1.77, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 110.92, "reach": 9722, "ctr": 2.54, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120248783496850325": {"spend": 2.27, "reach": 242, "ctr": 2.26, "resultado_label": "Cliques no link", "resultado_val": 6}, "120248783595050325": {"spend": 5.63, "reach": 390, "ctr": 3.73, "resultado_label": "Cliques no link", "resultado_val": 17}, "120250120160770325": {"spend": 86.83, "reach": 1202, "ctr": 0.64, "resultado_label": "Conversas iniciadas", "resultado_val": 11}, "120252286713720325": {"spend": 470.14, "reach": 4785, "ctr": 0.61, "resultado_label": "Conversas iniciadas", "resultado_val": 31}, "120252286767270325": {"spend": 431.92, "reach": 3308, "ctr": 0.53, "resultado_label": "Conversas iniciadas", "resultado_val": 40}, "120252286799140325": {"spend": 517.67, "reach": 7892, "ctr": 0.87, "resultado_label": "Conversas iniciadas", "resultado_val": 102}, "120252650058040325": {"spend": 123.72, "reach": 1489, "ctr": 0.77, "resultado_label": "Conversas iniciadas", "resultado_val": 16}, "120252650167070325": {"spend": 168.36, "reach": 1787, "ctr": 0.67, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120252930390390325": {"spend": 9.19, "reach": 817, "ctr": 4.94, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120253063235880325": {"spend": 25.7, "reach": 508, "ctr": 0.65, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253063252560325": {"spend": 24.69, "reach": 372, "ctr": 0.36, "resultado_label": "Conversas iniciadas", "resultado_val": 3}, "120253070537580325": {"spend": 32.46, "reach": 555, "ctr": 0.54, "resultado_label": "Cliques no link", "resultado_val": 5}, "120253070538910325": {"spend": 47.34, "reach": 1169, "ctr": 0.38, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253070542270325": {"spend": 28.33, "reach": 406, "ctr": 0.15, "resultado_label": "Conversas iniciadas", "resultado_val": 1}}, "dias": 31}, "last_30d": {"spend": 2024.83, "reach": 29499, "impressions": 87951, "clicks": 1321, "link_clicks": 998, "ctr": 1.13, "cpc": 2.03, "cpm": 23.022251, "frequency": 2.981491, "dms": 232, "convs_ig": 229, "convs_fb": 3, "custo_conversa": 8.73, "ads": {"120248783244060325": {"spend": 52.18, "reach": 7840, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120248783352730325": {"spend": 105.84, "reach": 8960, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120248783496850325": {"spend": 3.47, "reach": 298, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 9}, "120248783595050325": {"spend": 6.58, "reach": 440, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 17}, "120250120160770325": {"spend": 46.77, "reach": 719, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 8}, "120252286713720325": {"spend": 432.86, "reach": 4543, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 30}, "120252286767270325": {"spend": 431.92, "reach": 3308, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 40}, "120252286799140325": {"spend": 499.17, "reach": 7724, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 100}, "120252650058040325": {"spend": 101.72, "reach": 1253, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120252650167070325": {"spend": 118.94, "reach": 1424, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 11}, "120252930390390325": {"spend": 9.19, "reach": 817, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 14}, "120253063235880325": {"spend": 40.01, "reach": 631, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 4}, "120253063252560325": {"spend": 32.99, "reach": 419, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 5}, "120253070537580325": {"spend": 38.99, "reach": 918, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 7}, "120253070538910325": {"spend": 64.07, "reach": 3310, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 2}, "120253070542270325": {"spend": 35.23, "reach": 770, "ctr": 0, "resultado_label": "Conversas iniciadas", "resultado_val": 1}, "120253138879090325": {"spend": 2.44, "reach": 57, "ctr": 0, "resultado_label": "Resultados", "resultado_val": 0}, "120253138879100325": {"spend": 1.05, "reach": 46, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 1}, "120253138879110325": {"spend": 1.41, "reach": 34, "ctr": 0, "resultado_label": "Cliques no link", "resultado_val": 2}}, "dias": 30}};
+const FILTER_BTNS = {"last_7d": "7d", "last_14d": "14d", "this_month": "mes", "last_month": "mes-ant", "last_30d": "30d"};
+const FILTER_LABELS = {"last_7d": "7 dias", "last_14d": "14 dias", "this_month": "Mês atual", "last_month": "Mês passado", "last_30d": "30 dias"};
 
 // ═══ HELPERS DE FORMATAÇÃO (JS) ═══
 const MESES_JS = ['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
@@ -1604,41 +1886,20 @@ function applyFilter(preset) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
 
   // Atualizar botão ativo
-  const btnMap = { last_7d:'7d', last_14d:'14d', last_30d:'30d' };
-  const btn = document.getElementById('filter-' + btnMap[preset]);
+  const btn = document.getElementById('filter-' + FILTER_BTNS[preset]);
   if (btn) btn.classList.add('active');
 
   // Atualizar campanhas via JSON pré-coletado
   renderCamps(preset);
 
   // Atualizar label do título
-  const labelMap = { last_7d:'7 dias', last_14d:'14 dias', last_30d:'30 dias' };
   const el = id => document.getElementById(id);
   const kpiLabel = el('kpi-period-label');
-  if (kpiLabel) kpiLabel.innerHTML = '&middot; ' + (labelMap[preset] || '');
-
-  if (DAILY_DATA.length === 0) return;
-
-  const diasMap = { last_7d: 7, last_14d: 14, last_30d: 30 };
-  const nDias = diasMap[preset] || 30;
-  const lastDate = DAILY_DATA[DAILY_DATA.length - 1].date;
-  const lastDt = parseDate(lastDate);
-  const s = new Date(lastDt); s.setDate(s.getDate() - nDias + 1);
-  const since = s.toISOString().slice(0, 10);
-  const until = lastDate;
-
-  const filtered = filterDaily(since, until);
-  const current = sumDaily(filtered);
-
-  // Comparativo com período anterior
-  const perioDias = Math.round((parseDate(until) - parseDate(since)) / 86400000) + 1;
-  const prevUntilDt = new Date(parseDate(since)); prevUntilDt.setDate(prevUntilDt.getDate() - 1);
-  const prevSinceDt = new Date(prevUntilDt); prevSinceDt.setDate(prevSinceDt.getDate() - perioDias + 1);
-  const prevFiltered = filterDaily(prevSinceDt.toISOString().slice(0,10), prevUntilDt.toISOString().slice(0,10));
-  const deltas = prevFiltered.length > 0 ? calcDeltas(current, sumDaily(prevFiltered)) : {};
+  if (kpiLabel) kpiLabel.innerHTML = '&middot; ' + (FILTER_LABELS[preset] || '');
 
   // Atualizar KPIs usando PERIOD_DATA (dados reais da API por período)
   const pd = PERIOD_DATA[preset] || PERIOD_DATA['last_30d'];
+  const nDias = pd.dias || 30;
   const diasPorDia = nDias > 0 ? pd.spend / nDias : 0;
   el('kpi-val-spend').textContent = fmtBrl(pd.spend);
   el('kpi-sub-spend').innerHTML = '~' + fmtBrl(diasPorDia) + '/dia ';
@@ -1669,18 +1930,18 @@ function applyFilter(preset) {
   }
 
   // Trocar gráficos demográficos
-  ['7d','14d','30d'].forEach(p => {
+  Object.values(FILTER_BTNS).forEach(p => {
     const d = document.getElementById('demo-' + p); if (d) d.style.display = 'none';
   });
-  const demoId = 'demo-' + (btnMap[preset] || '30d');
+  const demoId = 'demo-' + (FILTER_BTNS[preset] || '30d');
   const demoEl = document.getElementById(demoId); if (demoEl) demoEl.style.display = '';
 
   // Atualizar métricas dos criativos
   const adsM = pd.ads || {};
   document.querySelectorAll('[data-ad-id]').forEach(card => {
     const adId = card.getAttribute('data-ad-id');
-    const m = adsM[adId];
-    if (!m) return;
+    // Anúncio sem veiculação no período: zera em vez de manter os números do período anterior
+    const m = adsM[adId] || { spend:0, reach:0, resultado_val:0, ctr:0 };
     const sEl = card.querySelector('[data-ad-metric="spend"]');
     const rEl = card.querySelector('[data-ad-metric="reach"]');
     const resEl = card.querySelector('[data-ad-metric="resultado"]');
@@ -1690,8 +1951,6 @@ function applyFilter(preset) {
     if (resEl) resEl.textContent = fmtNum(m.resultado_val);
     if (ctrEl) ctrEl.textContent = fmtPct(m.ctr);
   });
-
-  renderDailyBars(filtered);
 }
 
 // ═══ EXPORTAR PDF ═══
